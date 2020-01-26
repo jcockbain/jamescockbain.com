@@ -1,4 +1,4 @@
-import { PageRendererProps } from "gatsby"
+import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { rhythm, styledScale } from "../utils/typography"
@@ -24,6 +24,7 @@ const StyledLink = styled(FadeLink)`
   box-shadow: none;
   color: inherit;
   text-decoration: none;
+  padding: 3rem;
 `
 
 const Content = styled.div`
@@ -36,16 +37,34 @@ const Content = styled.div`
 export const Layout = (props: Props) => {
   const { location, title, children } = props
   const rootPath = `/`
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          menuLinks {
+            link
+            name
+          }
+        }
+      }
+    }
+  `)
 
   const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3
 
+  const links = (
+    <ul>
+      {data.site.siteMetadata.menuLinks.map(link => (
+        <StyledLink key={link.name} to={link.link}>
+          {link.name}
+        </StyledLink>
+      ))}
+    </ul>
+  )
+
   return (
     <Content>
-      <header>
-        <HeaderTitle>
-          <StyledLink to={`/`}>{title}</StyledLink>
-        </HeaderTitle>
-      </header>
+      <header>{links}</header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
