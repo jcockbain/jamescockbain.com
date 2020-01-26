@@ -12,7 +12,7 @@ import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 
 const Content = styled.div`
-  display: flex;
+  display: inline;
   margin-bottom: ${rhythm(2.5)};
 `
 
@@ -23,7 +23,6 @@ const GatsbyImage = forwardRef(
 )
 
 const Avatar = styled(GatsbyImage)`
-  border-radius: 100%;
   margin-bottom: 0;
   margin-right: ${rhythm(1 / 2)};
   min-width: 50px;
@@ -34,7 +33,7 @@ export const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-picture.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 200, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -57,14 +56,14 @@ export const Bio = () => {
       <Avatar
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
-        imgStyle={{ borderRadius: "50%" }}
+        imgStyle={{ borderRadius: "20%" }}
       />
       <p>
         Written by <strong>{author}</strong>
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
+      </p>
+      <p>
+        You should follow him on{" "}
+        <a href={`https://twitter.com/${social.twitter}`}> Twitter</a>
       </p>
     </Content>
   )
