@@ -1,7 +1,6 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { Bio } from "../components/bio"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
@@ -48,12 +47,8 @@ const BlogIndex = (props: Props) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
-      <Bio />
+    <Layout location={props.location} title={"Blog"}>
+      <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
         const fields = node!.fields!

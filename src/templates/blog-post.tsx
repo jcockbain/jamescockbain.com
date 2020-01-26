@@ -42,7 +42,7 @@ const BlogPostTemplate = (props: Props) => {
   const { previous, next } = props.pageContext
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location} title={"Home"}>
       <SEO
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
