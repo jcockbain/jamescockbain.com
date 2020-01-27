@@ -9,12 +9,16 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: "home",
+        name: "blog",
         link: "/",
       },
       {
         name: "about",
         link: "/about",
+      },
+      {
+        name: "projects",
+        link: "/projects",
       },
     ],
   },
@@ -73,7 +77,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/rocket.svg`,
       },
     },
     `gatsby-plugin-offline`,

@@ -21,10 +21,11 @@ const StyledH3 = styled.h3`
 `
 
 const StyledLink = styled(FadeLink)`
+  display: inline-block;
   box-shadow: none;
   color: inherit;
   text-decoration: none;
-  padding: 3rem;
+  margin-right: 1rem;
 `
 
 const Content = styled.div`
@@ -32,6 +33,10 @@ const Content = styled.div`
   margin-right: auto;
   max-width: ${rhythm(24)};
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
+`
+
+const StyledList = styled.div`
+  float: right;
 `
 
 export const Layout = (props: Props) => {
@@ -53,18 +58,31 @@ export const Layout = (props: Props) => {
   const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3
 
   const links = (
-    <ul>
+    <StyledList>
       {data.site.siteMetadata.menuLinks.map(link => (
-        <StyledLink key={link.name} to={link.link}>
+        <StyledLink
+          key={link.name}
+          style={{ textShadow: `none`, backgroundImage: `none` }}
+          to={link.link}
+        >
+          {" "}
           {link.name}
         </StyledLink>
       ))}
-    </ul>
+    </StyledList>
   )
 
   return (
     <Content>
-      <header>{links}</header>
+      <header>
+        <FadeLink
+          to="/"
+          style={{ textShadow: `none`, backgroundImage: `none` }}
+        >
+          <h3 style={{ display: `inline` }}>jcockbain.dev</h3>
+        </FadeLink>
+        {links}
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
