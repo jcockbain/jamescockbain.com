@@ -56,13 +56,13 @@ export const Bio = () => {
       <Avatar
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
-        imgStyle={{ borderRadius: "20%" }}
+        imgStyle={{ borderRadius: "20%", padding: "5%" }}
       />
       <p>
-        Written by <strong>{author}</strong>
+        This is me, <strong>{author}</strong>
       </p>
       <p>
-        You should follow him on{" "}
+        You can find me on,{" "}
         <a href={`https://twitter.com/${social.twitter}`}> Twitter</a>
       </p>
     </Content>
