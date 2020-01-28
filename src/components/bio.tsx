@@ -41,9 +41,6 @@ export const Bio = () => {
       site {
         siteMetadata {
           author
-          social {
-            twitter
-          }
         }
       }
     }
@@ -60,10 +57,6 @@ export const Bio = () => {
       />
       <p>
         This is me, <strong>{author}</strong>
-      </p>
-      <p>
-        You can find me on,{" "}
-        <a href={`https://twitter.com/${social.twitter}`}> Twitter</a>
       </p>
     </Content>
   )
