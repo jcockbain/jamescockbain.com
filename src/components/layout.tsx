@@ -1,6 +1,7 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
+import Footer from "../components/footer"
 import { rhythm, styledScale } from "../utils/typography"
 import { FadeLink } from "./link"
 
@@ -55,7 +56,12 @@ export const Layout = (props: Props) => {
     }
   `)
 
-  const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3
+  const HeaderTitle =
+    location.pathname === rootPath ? (
+      <StyledH1>{data.site.siteMetadata.title}</StyledH1>
+    ) : (
+      <StyledH3>{data.site.siteMetadata.title}</StyledH3>
+    )
 
   const links = (
     <StyledList>
@@ -82,13 +88,10 @@ export const Layout = (props: Props) => {
           <h3 style={{ display: `inline` }}>jcockbain.dev</h3>
         </FadeLink>
         {links}
+        {HeaderTitle}
       </header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </Content>
   )
 }

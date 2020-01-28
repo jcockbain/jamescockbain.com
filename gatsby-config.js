@@ -6,6 +6,9 @@ module.exports = {
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `james_cockbain`,
+      github: `jcockbain`,
+      linkedin: `james-cockbain-0a3615102`,
+      medium: `@jcockbain96`,
     },
     menuLinks: [
       {

@@ -25,6 +25,7 @@ const AboutMe = (props: Props) => {
   return (
     <Layout location={props.location} title={data.site.siteMetadata.title}>
       <SEO title="About me" />
+      <Bio />
       <StyledDiv>
         <p>
           I'm an IBM Cloud software developer holding a master's degree in
@@ -34,7 +35,6 @@ const AboutMe = (props: Props) => {
           have experience with Python, Kubernetes and Typescript.
         </p>
       </StyledDiv>
-      <Bio />
     </Layout>
   )
 }
