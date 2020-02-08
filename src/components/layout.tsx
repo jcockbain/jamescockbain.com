@@ -1,3 +1,4 @@
+import { Home } from "@material-ui/icons"
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
@@ -8,6 +9,11 @@ import { FadeLink } from "./link"
 interface Props extends PageRendererProps {
   title: string
   children: ReactNode
+}
+
+interface Link {
+  name: string
+  link: string
 }
 
 const StyledH1 = styled.h1`
@@ -32,7 +38,7 @@ const StyledLink = styled(FadeLink)`
 const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(24)};
+  max-width: ${rhythm(36)};
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
 `
 
@@ -41,8 +47,7 @@ const StyledList = styled.div`
 `
 
 export const Layout = (props: Props) => {
-  const { location, title, children } = props
-  const rootPath = `/`
+  const { children } = props
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -56,19 +61,16 @@ export const Layout = (props: Props) => {
     }
   `)
 
-  const HeaderTitle =
-    location.pathname === rootPath ? (
-      <StyledH1>{data.site.siteMetadata.title}</StyledH1>
-    ) : (
-      <StyledH3>{data.site.siteMetadata.title}</StyledH3>
-    )
-
   const links = (
     <StyledList>
-      {data.site.siteMetadata.menuLinks.map(link => (
+      {data.site.siteMetadata.menuLinks.map((link: Link) => (
         <StyledLink
           key={link.name}
-          style={{ textShadow: `none`, backgroundImage: `none` }}
+          style={{
+            textShadow: `none`,
+            backgroundImage: `none`,
+            fontSize: `22px`,
+          }}
           to={link.link}
         >
           {" "}
@@ -81,14 +83,19 @@ export const Layout = (props: Props) => {
   return (
     <Content>
       <header>
+        <Home />
         <FadeLink
           to="/"
-          style={{ textShadow: `none`, backgroundImage: `none` }}
+          style={{
+            textShadow: `none`,
+            backgroundImage: `none`,
+            fontSize: `24px`,
+          }}
         >
           <h3 style={{ display: `inline` }}>jcockbain.dev</h3>
         </FadeLink>
         {links}
-        {HeaderTitle}
+        <div />
       </header>
       <main>{children}</main>
       <Footer />

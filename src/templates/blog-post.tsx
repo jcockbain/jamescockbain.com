@@ -38,7 +38,6 @@ const BlogPostTemplate = (props: Props) => {
   const excerpt = post.excerpt!
   const frontmatter = post.frontmatter!
   const html = post.html!
-  const siteTitle = data.site!.siteMetadata!.title!
   const { previous, next } = props.pageContext
 
   return (

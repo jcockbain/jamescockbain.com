@@ -13,7 +13,6 @@ import { rhythm } from "../utils/typography"
 
 const Content = styled.div`
   display: inline;
-  margin-bottom: ${rhythm(2.5)};
 `
 
 const GatsbyImage = forwardRef(
@@ -46,7 +45,7 @@ export const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
 
   return (
     <Content>

@@ -30,6 +30,7 @@ const Footer = () => {
       style={{
         marginTop: rhythm(2.5),
         paddingTop: rhythm(1),
+        fontSize: `20px`,
       }}
     >
       <a href={github} target="_blank" rel="noopener noreferrer">
