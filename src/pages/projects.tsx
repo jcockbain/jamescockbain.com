@@ -1,12 +1,12 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React from "react"
-import { Bio } from "../components/bio"
 import { Layout } from "../components/layout"
+import Project from "../components/project"
 import { SEO } from "../components/seo"
 
 type Props = PageRendererProps
 
-const AboutMe = (props: Props) => {
+const Projects = (props: Props) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -16,12 +16,18 @@ const AboutMe = (props: Props) => {
       }
     }
   `)
+
+  const projects = [1, 2, 3, 4]
+
+  const projectCards = projects.map(p => <Project key={p} />)
+
   return (
     <Layout location={props.location} title={data.site.siteMetadata.title}>
       <SEO title="Projects" />
       <h1>Projects</h1>
+      {projectCards}
     </Layout>
   )
 }
 
-export default AboutMe
+export default Projects
