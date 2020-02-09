@@ -2,10 +2,6 @@ import { Card } from "@material-ui/core"
 import { styled } from "@material-ui/core"
 import React from "react"
 
-// const StyledDiv = styled.p`
-//   margin: ${rhythm(1)};
-// `
-
 const ProjectCard = styled(Card)({
   border: 10,
   borderRadius: 10,

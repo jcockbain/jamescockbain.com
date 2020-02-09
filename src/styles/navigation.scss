@@ -1,0 +1,65 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 20px;
+
+  .nav-container {
+    padding: 0 1.5rem;
+    height: 55px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.3s ease;
+  }
+
+  .brand {
+    a {
+      display: flex;
+      align-items: center;
+      color: #333;
+      margin-right: 0;
+      font-weight: 500;
+      font-size: 1rem;
+
+      &:hover,
+      &:focus {
+        color: black;
+      }
+    }
+
+    .rocket {
+      width: 5%;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 1.05rem;
+      font-weight: 400;
+      padding: 0.75rem;
+      margin: 0;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.2;
+      text-align: center;
+
+      &:hover,
+      &:active {
+        color: #111;
+      }
+    }
+  }
+}
