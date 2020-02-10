@@ -43,7 +43,6 @@ const BlogIndex = (props: Props) => {
     }
   `)
 
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
   return (
