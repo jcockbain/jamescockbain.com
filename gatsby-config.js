@@ -12,15 +12,15 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: "blog",
+        name: "Blog",
         link: "/",
       },
       {
-        name: "about",
-        link: "/about",
+        name: "About",
+        link: "/pages/me",
       },
       {
-        name: "projects",
+        name: "Projects",
         link: "/projects",
       },
     ],
@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content`,
+        name: `posts`,
       },
     },
     {
