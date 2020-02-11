@@ -36,6 +36,7 @@ const BlogIndex = (props: Props) => {
               date(formatString: "MMMM DD, YYYY")
               title
               description
+              template
             }
           }
         }
@@ -50,6 +51,9 @@ const BlogIndex = (props: Props) => {
       <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
+        if (frontmatter.template! !== "post") {
+          return
+        }
         const fields = node!.fields!
         const slug = fields.slug!
         const excerpt = node!.excerpt!

@@ -6,6 +6,9 @@ interface Post {
     fields: {
       slug: string
     }
+    frontmatter: {
+      template: string
+    }
   }
 }
 
@@ -46,10 +49,17 @@ export const createPages: GatsbyCreatePages = async ({
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
+    const component = post.node.frontmatter.template
+
+    const pathToTemplate =
+      component === "post"
+        ? `./src/templates/blog-post.tsx`
+        : `./src/templates/page.tsx`
+
     createPage({
       path: post.node.fields.slug,
       // tslint:disable-next-line:object-literal-sort-keys
-      component: path.resolve(`./src/templates/blog-post.tsx`),
+      component: path.resolve(pathToTemplate),
       context: {
         next,
         previous,

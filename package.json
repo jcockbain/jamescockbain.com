@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog-typescript",
+  "name": "jcockbain.dev",
   "private": true,
-  "description": "A starter gatsby blog using typescript",
+  "description": "My personal site",
   "version": "0.1.0",
-  "author": "Greg Perlman <gperlman27@gmail.com>",
+  "author": "James Cockbain <jcockbain96@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jcockbain/jcockbain.io/issues"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.1",
