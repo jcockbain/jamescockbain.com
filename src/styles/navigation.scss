@@ -7,6 +7,10 @@
   background: $background;
   padding: 20px;
 
+  &.scroll {
+    box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+  }
+
   .nav-container {
     padding: 0 1.5rem;
     height: 55px;
