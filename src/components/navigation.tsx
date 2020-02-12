@@ -43,7 +43,7 @@ const Navigation = () => {
   )
 
   return (
-    <nav className="nav">
+    <nav className="nav scroll">
       <div className="nav-container">
         <div className="brand">
           <StyledLink to="/">
