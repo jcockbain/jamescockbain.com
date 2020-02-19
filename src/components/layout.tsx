@@ -6,7 +6,6 @@ import Navigation from "../components/navigation"
 import { rhythm } from "../utils/typography"
 
 interface Props extends PageRendererProps {
-  title: string
   children: ReactNode
 }
 

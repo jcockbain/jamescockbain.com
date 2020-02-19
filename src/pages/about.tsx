@@ -44,7 +44,7 @@ const AboutMe = (props: Props) => {
     }
   `)
   return (
-    <Layout location={props.location} title={data.site.siteMetadata.title}>
+    <Layout location={props.location}>
       <SEO title="About me" />
       {/* <Bio /> */}
       <StyledDiv>

@@ -1,7 +1,8 @@
 .form-container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: $container-background;
   padding: 20px;
+  border: 2px solid $subtle-border;
 }
 
 .contact-form {
@@ -31,11 +32,11 @@
   }
 
   button {
-    color: white;
     width: 100%;
     border-radius: 4px;
     padding: 12px 20px;
-    background-color: #4caf50;
+    color: $text-02;
+    background-color: $success;
     cursor: pointer;
   }
 }

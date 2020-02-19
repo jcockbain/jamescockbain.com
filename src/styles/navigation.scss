@@ -59,10 +59,11 @@
       color: $text-01;
       line-height: 1.2;
       text-align: center;
+      border-radius: 4px;
 
       &:hover,
       &:active {
-        color: #111;
+        background-color: $hover-01;
       }
     }
   }
