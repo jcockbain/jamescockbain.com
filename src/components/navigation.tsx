@@ -1,9 +1,10 @@
 import { Home } from "@material-ui/icons"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import { FadeLink } from "./link"
 
-import React from "react"
+import React, { useState } from "react"
 
 const StyledLink = styled(FadeLink)`
   display: inline-block;
@@ -19,6 +20,16 @@ interface Link {
 }
 
 const Navigation = () => {
+  const [isScrolledDown, setIsScrolledDown] = useState(false)
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    const isShow = currPos.y !== prevPos.y
+    if (isShow) {
+      const isScrolled = !!(currPos.y < -30)
+      setIsScrolledDown(isScrolled)
+    }
+  }, [])
+
   const data = useStaticQuery(graphql`
     query NavQuery {
       site {
@@ -43,7 +54,7 @@ const Navigation = () => {
   )
 
   return (
-    <nav className="nav scroll">
+    <nav className={isScrolledDown ? "nav scroll" : "nav"}>
       <div className="nav-container">
         <div className="brand">
           <StyledLink to="/">
