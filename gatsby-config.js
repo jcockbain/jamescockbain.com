@@ -13,7 +13,7 @@ module.exports = {
     menuLinks: [
       {
         name: "Blog",
-        link: "/",
+        link: "/blogs",
       },
       {
         name: "About",

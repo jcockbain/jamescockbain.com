@@ -35,7 +35,7 @@ const Navigation = () => {
   const links = (
     <div className="links">
       {data.site.siteMetadata.menuLinks.map((link: Link) => (
-        <StyledLink key={link.name} to={link.link}>
+        <StyledLink key={link.name} to={link.link} activeClassName="active">
           {link.name}
         </StyledLink>
       ))}

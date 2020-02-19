@@ -1,4 +1,4 @@
-import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
+import { PageRendererProps } from "gatsby"
 import React from "react"
 import ContactForm from "../components/contactForm"
 import { Layout } from "../components/layout"
@@ -6,23 +6,13 @@ import { SEO } from "../components/seo"
 
 type Props = PageRendererProps
 
-const Projects = (props: Props) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Contact = (props: Props) => {
   return (
-    <Layout location={props.location} title={data.site.siteMetadata.title}>
+    <Layout location={props.location}>
       <SEO title="Contact Me" />
       <ContactForm />
     </Layout>
   )
 }
 
-export default Projects
+export default Contact

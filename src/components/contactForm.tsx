@@ -1,6 +1,5 @@
 import React from "react"
 
-
 const Contact = () => {
   return (
     <div className="form-container">
@@ -23,7 +22,7 @@ const Contact = () => {
         </label>
         <label>
           Message
-          <textarea name="message" id="message" rows="5" />
+          <textarea name="message" id="message" rows={5} />
         </label>
         <button type="submit">Submit</button>
         <input type="reset" value="Clear" />
