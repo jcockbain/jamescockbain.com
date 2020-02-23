@@ -2,8 +2,47 @@ html {
   background-color: $background;
 }
 
-#main-content {
-  margin-top: 100px;
+body {
+  font-size: 1rem;
 }
 
+#main-content {
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+}
+
+.container {
+  h1, h2 {
+    margin: 1rem 0;
+  }
+
+  img {
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.footer {
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0 0 0;
+}
+
+@include small-breakpoint {
+  #main-content {
+    margin-top: 50px;
+    padding: 20px 0 0 0;
+    min-height: calc(100vh - 219px);
+  }
+}
+
+@include small-breakpoint{
+  .container {
+    img{
+      width: 50%;
+    }
+  }
+}
 

@@ -26,13 +26,7 @@ const Footer = () => {
   const medium = `https://medium.com/${data.site.siteMetadata.social.medium}`
 
   return (
-    <footer
-      style={{
-        marginTop: rhythm(2.5),
-        paddingTop: rhythm(1),
-        fontSize: `20px`,
-      }}
-    >
+    <footer className="footer">
       <a href={github} target="_blank" rel="noopener noreferrer">
         github
       </a>{" "}
@@ -43,7 +37,7 @@ const Footer = () => {
       &bull;{" "}
       <a href={linkedin} target="_blank" rel="noopener noreferrer">
         linkedin
-      </a>
+      </a>{" "}
       &bull;{" "}
       <a href={medium} target="_blank" rel="noopener noreferrer">
         medium

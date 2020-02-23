@@ -1,18 +1,9 @@
 import { Home } from "@material-ui/icons"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
 import { FadeLink } from "./link"
 
 import React, { useState } from "react"
-
-const StyledLink = styled(FadeLink)`
-  display: inline-block;
-  box-shadow: none;
-  color: inherit;
-  text-decoration: none;
-  margin-right: 1rem;
-`
 
 interface Link {
   name: string
@@ -46,9 +37,9 @@ const Navigation = () => {
   const links = (
     <div className="links">
       {data.site.siteMetadata.menuLinks.map((link: Link) => (
-        <StyledLink key={link.name} to={link.link} activeClassName="active">
+        <FadeLink key={link.name} to={link.link} activeClassName="active">
           {link.name}
-        </StyledLink>
+        </FadeLink>
       ))}
     </div>
   )
@@ -57,10 +48,10 @@ const Navigation = () => {
     <nav className={isScrolledDown ? "nav scroll" : "nav"}>
       <div className="nav-container">
         <div className="brand">
-          <StyledLink to="/">
+          <FadeLink to="/">
             <Home />
             jcockbain.dev
-          </StyledLink>
+          </FadeLink>
         </div>
         {links}
       </div>
