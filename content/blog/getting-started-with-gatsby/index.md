@@ -1,7 +1,8 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: Getting started with Gatsby
+date: 2020-02-26
 template: post
+description: Getting to grips with Gatsby as a beginner, first steps in starting this site.
 
 ---
 

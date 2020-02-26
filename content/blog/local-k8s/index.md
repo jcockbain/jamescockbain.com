@@ -1,8 +1,8 @@
 ---
-title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
+title: Methods of running a local Kubernetes cluster
+date: 2020-03-01
 template: post
-
+description: Comparing using Code Ready Containers and Docker For Desktop for local Kube development.
 ---
 
 Wow! I love blogging so much already.
