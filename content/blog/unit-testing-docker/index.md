@@ -1,8 +1,8 @@
 ---
-title: New Beginnings
-date: "2015-05-28T22:40:32.169Z"
+title: Unit testing the Docker API in Golang
+date: 2020-02-28
 template: post
-description: This is a custom description for Seo and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: Learning about using Golang interface to inject dependency, and applying this with the Docker API.
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

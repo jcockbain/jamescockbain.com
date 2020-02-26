@@ -4,16 +4,14 @@ date: 2020-02-08
 template: page
 ---
 
+## Me
+
 Hi, I'm James and this is my website.
 
- <!-- This is what I look like on holiday.
+I currently work as a software developer within IBM cloud. Most recently, I've been working on an open source project aiming to enhance the development of cloud-native applications in containers. If you're interested, more on that [here](https://www.eclipse.org/codewind/).
 
-![Me on holiday](./profile-picture.jpg "me") -->
+## Aim for this site
 
-I'm an IBM Cloud software developer holding a master's degree in
-physics, I enjoy applying my analytical and problem-solving skills in
-the dynamic technology industry.
+I started this website because I want to share my own experiences and learn in the open.
 
-I currently specialise in Node.js and
-have professional experience working with Go, Docker and React. I also
-have experience with Python, Kubernetes and Typescript.
+With that in mind, please feel free to get in touch and let me know what you think!
