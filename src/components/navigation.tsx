@@ -49,8 +49,8 @@ const Navigation = () => {
       <div className="nav-container">
         <div className="brand">
           <FadeLink to="/">
-            <Home />
-            jcockbain.dev
+            <Home className="home" />
+            James Cockbain
           </FadeLink>
         </div>
         {links}

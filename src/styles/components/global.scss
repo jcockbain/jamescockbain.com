@@ -11,6 +11,10 @@ body {
   padding: 10px 0 0 0;
 }
 
+.date {
+  color: $text-secondary;
+}
+
 .container {
   h1, h2 {
     margin: 1rem 0;
@@ -41,5 +45,11 @@ body {
     img{
       width: 50%;
     }
+  }
+
+  .footer {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem 0 0 0;
   }
 }

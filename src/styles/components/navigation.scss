@@ -19,11 +19,19 @@
     transition: height 0.3s ease;
   }
 
+  .home {
+    height: 23px;
+    width: 23px;
+    min-width: 23px;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
   .brand {
     a {
       display: flex;
       align-items: center;
-      color: $text-01;
+      color: $text-main;
       margin: 0.2rem;
       padding: 0.2rem;
       font-weight: 500;
@@ -59,7 +67,7 @@
       font-weight: 400;
       margin: 0.2rem;
       padding: 0.2rem;
-      color: $text-01;
+      color: $text-main;
       line-height: 1.2;
       text-align: center;
       border-radius: 4px;
@@ -83,7 +91,7 @@
     }
     .links {
       a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin: 0.4rem;
         padding: 0.4rem;
       }
@@ -91,7 +99,7 @@
 
     .brand {
       a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin: 0.4rem;
         padding: 0.4rem;
       }
