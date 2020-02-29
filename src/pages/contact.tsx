@@ -12,9 +12,9 @@ import axios from "axios"
 type Props = PageRendererProps
 
 const Contact = (props: Props) => {
-  const [submitted, setSubmitted] = useState(true)
+  const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
 
   const signUp = (inputs: any) => {
     setLoading(true)
