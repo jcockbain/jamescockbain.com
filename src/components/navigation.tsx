@@ -1,4 +1,4 @@
-import { Home } from "@material-ui/icons"
+// import { Home } from "@material-ui/icons"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { graphql, useStaticQuery } from "gatsby"
 import { FadeLink } from "./link"
@@ -49,8 +49,8 @@ const Navigation = () => {
       <div className="nav-container">
         <div className="brand">
           <FadeLink to="/">
-            <Home className="home" />
-            James Cockbain
+            {/* <Home className="home" /> */}
+            Home
           </FadeLink>
         </div>
         {links}
