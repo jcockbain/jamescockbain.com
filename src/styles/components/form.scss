@@ -2,7 +2,30 @@
   border-radius: 5px;
   background-color: $container-background;
   padding: 20px;
-  border: 2px solid $subtle-border;
+  border: 2px solid $form-border;
+
+  .response-panel {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    border: 2px solid $form-border;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: $text-main;
+    background-color: $background;
+    cursor: pointer;
+
+    &:hover, &:active{
+      background: $hover-01;
+    }
+  }
 }
 
 .contact-form {
@@ -10,8 +33,9 @@
   input[type="email"] {
     width: 100%;
     padding: 12px 20px;
+    border: 2px solid $form-border;
+    border-radius: 4px;
     margin: 8px 0;
-    box-sizing: border-box;
   }
 
   input[type="reset"] {
@@ -26,17 +50,8 @@
     width: 100%;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid $form-border;
     border-radius: 4px;
     background-color: #f8f8f8;
-  }
-
-  button {
-    width: 100%;
-    border-radius: 4px;
-    padding: 12px 20px;
-    color: $text-inverse;
-    background-color: $success;
-    cursor: pointer;
   }
 }

@@ -1,33 +1,59 @@
 import React from "react"
+import useContactForm from "../hooks/useContactForm"
 
-const Contact = () => {
+interface ContactFormProps {
+  handleSubmit: (inputs: any) => void
+}
+
+const Contact = (props: ContactFormProps) => {
+  const { handleSubmit, inputs, handleInputChange } = useContactForm(() =>
+    props.handleSubmit(inputs)
+  )
+
   return (
-    <div className="form-container">
-      <form
-        method="post"
-        action="https://getform.io/f/e5e0893d-bc5d-4a10-9450-3de72bc87cbf"
-        className="contact-form"
-      >
-        <label>
-          Name
-          <input type="text" name="name" id="name" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" id="email" />
-        </label>
-        <label>
-          Subject
-          <input type="text" name="subject" id="subject" />
-        </label>
-        <label>
-          Message
-          <textarea name="message" id="message" rows={5} />
-        </label>
-        <button type="submit">Submit</button>
-        <input type="reset" value="Clear" />
-      </form>
-    </div>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <label>
+        Name
+        <input
+          type="text"
+          name="name"
+          id="name"
+          onChange={handleInputChange}
+          value={inputs.name}
+        />
+      </label>
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          onChange={handleInputChange}
+          value={inputs.email}
+        />
+      </label>
+      <label>
+        Subject
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          onChange={handleInputChange}
+          value={inputs.subject}
+        />
+      </label>
+      <label>
+        Message
+        <textarea
+          name="message"
+          id="message"
+          rows={5}
+          onChange={handleInputChange}
+          value={inputs.message}
+        />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
   )
 }
 
