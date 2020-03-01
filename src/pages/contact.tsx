@@ -1,10 +1,10 @@
 import { PageRendererProps } from "gatsby"
 import React, { useState } from "react"
 import ContactForm from "../components/contactForm"
-import ErrorPanel from "../components/errorPanel"
-import FormSubmittedPanel from "../components/formSubmittedPanel"
+import ErrorPanel from "../components/contactFormErrorPanel"
+import LoadingPanel from "../components/contactFormLoadingPanel"
+import FormSubmittedPanel from "../components/contactFormSubmittedPanel"
 import { Layout } from "../components/layout"
-import LoadingPanel from "../components/loadingPanel"
 import { SEO } from "../components/seo"
 
 import axios from "axios"

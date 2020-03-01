@@ -16,8 +16,8 @@ const HomePage = (props: Props) => {
           textAlign: `center`,
         }}
       >
-        <h1>Hi, I'm James</h1>
-        <p>I'm a full stack software developer, working for IBM.</p>
+        <h1>Hi, I'm James &#x1f44b;</h1>
+        <p>I'm a software developer, working for IBM.</p>
         <img src={ProfilePic} alt="a nice picture of me" />
         <p>
           You can read more about me, and why I started this site,{" "}

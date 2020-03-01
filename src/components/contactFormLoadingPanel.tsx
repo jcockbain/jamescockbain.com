@@ -1,11 +1,11 @@
 import React from "react"
 import { ClipLoader } from "react-spinners"
 
-const LoadingPanel = () => (
+const contactFormLoadingPanel = () => (
   <div className="response-panel">
     <ClipLoader />
     <div>Submitting Form</div>
   </div>
 )
 
-export default LoadingPanel
+export default contactFormLoadingPanel

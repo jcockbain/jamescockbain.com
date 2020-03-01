@@ -5,7 +5,7 @@ interface ContactFormProps {
   handleSubmit: (inputs: any) => void
 }
 
-const Contact = (props: ContactFormProps) => {
+const ContactForm = (props: ContactFormProps) => {
   const { handleSubmit, inputs, handleInputChange } = useContactForm(() =>
     props.handleSubmit(inputs)
   )
@@ -57,4 +57,4 @@ const Contact = (props: ContactFormProps) => {
   )
 }
 
-export default Contact
+export default ContactForm
