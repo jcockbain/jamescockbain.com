@@ -4,7 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import * as React from "react"
 import { ComponentProps } from "react"
 
-const FADE_TIME = 0.5
+const FADE_TIME = 0.3
 
 type Props = Partial<ComponentProps<typeof Link>>
 

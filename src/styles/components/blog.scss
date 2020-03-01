@@ -1,0 +1,29 @@
+.blog-summary {
+  border-radius: $regular-border-radius;
+  padding: 0.5rem;
+
+  p {
+    color: $text-secondary;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+    color: $text-main;
+    text-decoration: none;
+  }
+
+  .date {
+    color: $text-secondary;
+  }
+
+  &:hover {
+    background-color: $hover-02;
+  }
+}
+
+.blog-title {
+  color: $text-main;
+  text-decoration: none;
+}

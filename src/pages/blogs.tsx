@@ -5,15 +5,6 @@ import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
 import { MarkdownRemark } from "../graphql-types"
-import { rhythm } from "../utils/typography"
-
-const StyledLink = styled(FadeLink)`
-  box-shadow: none;
-`
-
-const Title = styled.h3`
-  margin-bottom: ${rhythm(1 / 4)};
-`
 
 type Props = PageRendererProps
 
@@ -60,11 +51,13 @@ const BlogIndex = (props: Props) => {
 
         const title = frontmatter.title || fields.slug
         return (
-          <div key={slug}>
-            <Title>
-              <StyledLink to={slug}>{title}</StyledLink>
-            </Title>
-            <small>{frontmatter.date}</small>
+          <div className="blog-summary" key={slug}>
+            <h3>
+              <FadeLink className="blog-title" to={slug}>
+                {title}
+              </FadeLink>
+            </h3>
+            <small className="date">{frontmatter.date}</small>
             <p
               dangerouslySetInnerHTML={{
                 __html: frontmatter.description || excerpt,

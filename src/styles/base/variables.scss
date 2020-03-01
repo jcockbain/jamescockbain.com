@@ -17,6 +17,7 @@ $width: 850px;
 $background: #ffffff;
 $container-background: #f4f4f4;
 $hover-01: #e5e5e5;
+$hover-02: #f2f2f2;
 
 $text-area-background: #f8f8f8;
 
@@ -24,7 +25,7 @@ $text-area-background: #f8f8f8;
 
 $text-main: #161616;
 $text-inverse: #ffffff;
-$text-secondary: #007acc;
+$text-secondary: rgba(0,0,0,0.4);
 
 /* Borders */
 
@@ -35,6 +36,6 @@ $form-border: #ccc;
 
 $success: #24a148;
 
-$form-border-radius: 4px;
+$regular-border-radius: 4px;
 $button-border-radius: 8px;
 
