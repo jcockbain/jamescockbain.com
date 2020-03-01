@@ -26,7 +26,6 @@
       color: $text-main;
       margin: 0.2rem;
       padding: 0.2rem;
-      font-weight: 500;
       font-size: 1rem;
       text-decoration: none;
       box-shadow: none;
@@ -34,7 +33,7 @@
 
       &:hover,
       &:focus {
-        background-color: $hover-01;
+        background-color: $hover-02;
       }
     }
   }
@@ -51,7 +50,6 @@
       display: flex;
       align-items: center;
       font-size: 1rem;
-      font-weight: 400;
       margin: 0.2rem;
       padding: 0.2rem;
       color: $text-main;
@@ -63,7 +61,7 @@
 
       &:hover,
       &.active {
-        background-color: $hover-01;
+        background-color: $hover-02;
       }
     }
   }

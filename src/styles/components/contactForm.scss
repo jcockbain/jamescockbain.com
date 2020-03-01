@@ -1,5 +1,5 @@
 .form-container {
-  border-radius: $form-border-radius;
+  border-radius: $regular-border-radius;
   background-color: $container-background;
   padding: 20px;
   border: 2px solid $form-border;
@@ -34,7 +34,7 @@
     width: 100%;
     padding: 12px 20px;
     border: 2px solid $form-border;
-    border-radius: $form-border-radius;
+    border-radius: $regular-border-radius;
     margin: 8px 0;
   }
 
@@ -42,7 +42,7 @@
     width: 100%;
     margin-top: 12px;
     cursor: pointer;
-    border-radius: $form-border-radius;
+    border-radius: $regular-border-radius;
     padding: 12px 20px;
   }
 
@@ -51,7 +51,7 @@
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid $form-border;
-    border-radius: $form-border-radius;
+    border-radius: $regular-border-radius;
     background-color: $text-area-background;
   }
 }
