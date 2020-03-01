@@ -10,20 +10,31 @@ $large: 1300px;
 $mobile: 620px;
 $tablet: $small;
 $desktop: $medium;
-
 $width: 850px;
+
+/* Backgrounds */
 
 $background: #ffffff;
 $container-background: #f4f4f4;
-
 $hover-01: #e5e5e5;
 
-$subtle-border: #e0e0e0;
+$text-area-background: #f8f8f8;
+
+/* Text */
 
 $text-main: #161616;
 $text-inverse: #ffffff;
 $text-secondary: #007acc;
 
+/* Borders */
+
+$subtle-border: #e0e0e0;
 $form-border: #ccc;
 
+/* Misc */
+
 $success: #24a148;
+
+$form-border-radius: 4px;
+$button-border-radius: 8px;
+

@@ -1,11 +1,11 @@
 import React from "react"
 
-const formSubmittedPanel = (props: any) => {
+const contactFormErrorPanel = (props: any) => {
   const { reset } = props
   return (
     <div className="response-panel">
-      <h2>Form Submitted &#x1F389;</h2>
-      <p>Thank you for getting in touch!</p>
+      <h2>Error submitting form. &#128546;</h2>
+      <p>Try again later, or get in touch elsewhere.</p>
       <button type="submit" onClick={reset}>
         Back
       </button>
@@ -13,4 +13,4 @@ const formSubmittedPanel = (props: any) => {
   )
 }
 
-export default formSubmittedPanel
+export default contactFormErrorPanel

@@ -1,4 +1,3 @@
-// import { Home } from "@material-ui/icons"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { graphql, useStaticQuery } from "gatsby"
 import { FadeLink } from "./link"
@@ -47,11 +46,8 @@ const Navigation = () => {
   return (
     <nav className={isScrolledDown ? "nav scroll" : "nav"}>
       <div className="nav-container">
-        <div className="brand">
-          <FadeLink to="/">
-            {/* <Home className="home" /> */}
-            Home
-          </FadeLink>
+        <div className="home">
+          <FadeLink to="/">&#x1f3e0; Home</FadeLink>
         </div>
         {links}
       </div>
