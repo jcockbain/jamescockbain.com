@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
+    "@types/react-google-recaptcha": "^1.1.1",
+    "@types/react-responsive": "^8.0.2",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.31",
@@ -38,7 +40,9 @@
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.0",
+    "react-responsive": "^8.0.3",
     "react-spinners": "^0.8.0",
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",

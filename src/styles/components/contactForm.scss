@@ -20,13 +20,28 @@
     padding: 12px 20px;
     color: $text-main;
     background-color: $background;
-    cursor: pointer;
 
-    &:hover, &:active{
-      background: $hover-01;
+    &:enabled{
+      cursor: pointer;
+
+      &:hover, &:active{
+        background: $hover-01;
+        opacity: 0.9;
+      }
     }
   }
+
+  :disabled{
+    opacity: 0.4;
+  }
 }
+
+.recaptcha {
+  // display: block;
+  // margin: auto;
+  text-align: center;
+}
+
 
 .contact-form {
   input[type="text"],
@@ -37,6 +52,7 @@
     border-radius: $regular-border-radius;
     margin: 8px 0;
   }
+
 
   input[type="reset"] {
     width: 100%;
