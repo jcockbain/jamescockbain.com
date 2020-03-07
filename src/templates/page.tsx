@@ -9,7 +9,7 @@ interface Props extends PageRendererProps {
   data: Query
 }
 
-const BlogPostTemplate = (props: Props) => {
+const PageTemplate = (props: Props) => {
   const data = props.data!
   const post = data.markdownRemark!
   const excerpt = post.excerpt!
@@ -17,18 +17,17 @@ const BlogPostTemplate = (props: Props) => {
   const html = post.html!
 
   return (
-    <Layout location={props.location} title={"Home"}>
+    <Layout location={props.location} title={frontmatter.title}>
       <SEO
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <h1>{post.frontmatter!.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
 
-export default BlogPostTemplate
+export default PageTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
