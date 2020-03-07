@@ -22,8 +22,6 @@ const ContactForm = (props: ContactFormProps) => {
 
   return (
     <div>
-      {isTabletOrMobile && <p>You are a desktop or laptop</p>}
-
       <form className="contact-form" onSubmit={handleSubmit}>
         <label>
           Name

@@ -6,7 +6,6 @@ const recaptcha = (props: any) => {
   const { size, onSubmit } = props
   const recaptchaKey = process.env.GATSBY_RECAPTCHA_KEY || "no_key"
 
-  console.log(recaptchaKey)
   const submitTrue = () => {
     onSubmit(true)
   }
