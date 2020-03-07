@@ -11,7 +11,7 @@
   }
 
   .nav-container {
-    padding: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
     margin: auto;
     display: flex;
     align-items: center;
@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding: 0.5rem;
 
     a {
       display: flex;
