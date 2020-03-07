@@ -38,7 +38,7 @@ const BlogIndex = (props: Props) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} title="Blog Posts">
       <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
@@ -51,8 +51,8 @@ const BlogIndex = (props: Props) => {
 
         const title = frontmatter.title || fields.slug
         return (
-          <FadeLink className="blog-title" to={slug}>
-            <div className="blog-summary" key={slug}>
+          <FadeLink key={slug} className="blog-title" to={slug}>
+            <div className="blog-summary">
               <h3>{title}</h3>
               <small className="date">{frontmatter.date}</small>
               <p

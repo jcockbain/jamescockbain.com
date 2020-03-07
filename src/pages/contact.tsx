@@ -49,7 +49,7 @@ const Contact = (props: Props) => {
   }
 
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} title="Contact Me">
       <SEO title="Contact Me" />
       <div className="form-container">{mainPanel}</div>
     </Layout>
