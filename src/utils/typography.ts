@@ -2,6 +2,7 @@ import { CSSObject } from "styled-components"
 import Typography from "typography"
 
 const typography = new Typography({
+  bodyFontFamily: ["Avenir Next", "Helvetica Neue", "Segoe UI"],
   headerFontFamily: [
     "Avenir Next",
     "Helvetica Neue",
@@ -10,7 +11,6 @@ const typography = new Typography({
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Avenir Next", "Segoe UI", "Helvetica Neue"],
 })
 
 // Hot reload typography in development.
