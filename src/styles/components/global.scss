@@ -16,7 +16,8 @@ body {
 }
 
 .container {
-  h1, h2 {
+  h1,
+  h2 {
     margin: 1rem 0;
   }
 
@@ -28,10 +29,24 @@ body {
   }
 }
 
-.footer {
-  font-size: 1rem;
-  margin: 0.5rem 0 0 0;
-  padding: 0.5rem 0 0 0;
+footer {
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.build-info {
+  padding: 0.5rem;
+}
+
+.footer-links {
+  padding: 0.5rem;
 }
 
 @include small-breakpoint {
@@ -42,7 +57,7 @@ body {
   }
 
   .container {
-    img{
+    img {
       width: 50%;
     }
   }
