@@ -1,4 +1,4 @@
-# jamescockbain.dev
+# jamescockbain.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f802fb76-5cc9-43f4-a2d0-b0d98eac8153/deploy-status)](https://app.netlify.com/sites/happy-spence-5fa372/deploys)
 
