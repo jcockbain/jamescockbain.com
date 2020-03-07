@@ -51,19 +51,17 @@ const BlogIndex = (props: Props) => {
 
         const title = frontmatter.title || fields.slug
         return (
-          <div className="blog-summary" key={slug}>
-            <h3>
-              <FadeLink className="blog-title" to={slug}>
-                {title}
-              </FadeLink>
-            </h3>
-            <small className="date">{frontmatter.date}</small>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: frontmatter.description || excerpt,
-              }}
-            />
-          </div>
+          <FadeLink className="blog-title" to={slug}>
+            <div className="blog-summary" key={slug}>
+              <h3>{title}</h3>
+              <small className="date">{frontmatter.date}</small>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: frontmatter.description || excerpt,
+                }}
+              />
+            </div>
+          </FadeLink>
         )
       })}
     </Layout>

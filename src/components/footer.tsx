@@ -24,22 +24,31 @@ const Footer = () => {
   const medium = `https://medium.com/${data.site.siteMetadata.social.medium}`
 
   return (
-    <footer className="footer">
-      <a href={github} target="_blank" rel="noopener noreferrer">
-        github
-      </a>{" "}
-      &bull;{" "}
-      <a href={twitter} target="_blank" rel="noopener noreferrer">
-        twitter
-      </a>{" "}
-      &bull;{" "}
-      <a href={linkedin} target="_blank" rel="noopener noreferrer">
-        linkedin
-      </a>{" "}
-      &bull;{" "}
-      <a href={medium} target="_blank" rel="noopener noreferrer">
-        medium
-      </a>
+    <footer>
+      <div className="footer-container">
+        <div className="footer-links">
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            github
+          </a>{" "}
+          &bull;{" "}
+          <a href={twitter} target="_blank" rel="noopener noreferrer">
+            twitter
+          </a>{" "}
+          &bull;{" "}
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            linkedin
+          </a>{" "}
+          &bull;{" "}
+          <a href={medium} target="_blank" rel="noopener noreferrer">
+            medium
+          </a>
+        </div>
+        <div className="build-info">
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </div>
+      </div>
     </footer>
   )
 }
