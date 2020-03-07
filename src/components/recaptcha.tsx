@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 
 import ReCAPTCHA from "react-google-recaptcha"
 
 const recaptcha = (props: any) => {
-  const { size, onSubmit } = props
+  const { onSubmit } = props
   const recaptchaKey = process.env.GATSBY_RECAPTCHA_KEY || "no_key"
 
   const submitTrue = () => {
@@ -15,11 +15,10 @@ const recaptcha = (props: any) => {
   }
 
   return (
-    <div className="recaptcha">
+    <div className="recaptcha-wrapper">
       <ReCAPTCHA
-        style={{ display: "block", margin: "auto", width: "35%" }}
-        size={size}
         sitekey={recaptchaKey}
+        style={{ display: "inline-block" }}
         onChange={submitTrue}
         onExpired={submitFalse}
       />

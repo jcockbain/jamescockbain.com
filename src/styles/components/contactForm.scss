@@ -14,34 +14,37 @@
     display: block;
     width: 50%;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border: 2px solid $form-border;
     border-radius: $button-border-radius;
     padding: 12px 20px;
     color: $text-main;
     background-color: $background;
 
-    &:enabled{
+    &:enabled {
       cursor: pointer;
 
-      &:hover, &:active{
+      &:hover,
+      &:active {
         background: $hover-01;
         opacity: 0.9;
       }
     }
   }
 
-  :disabled{
+  :disabled {
     opacity: 0.4;
   }
 }
 
-.recaptcha {
-  // display: block;
-  // margin: auto;
+.recaptcha-wrapper {
   text-align: center;
+  margin: 0.5rem 0;
+  transform: scale(0.8);
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.8);
+  -webkit-transform-origin: 0 0;
 }
-
 
 .contact-form {
   input[type="text"],
@@ -52,7 +55,6 @@
     border-radius: $regular-border-radius;
     margin: 8px 0;
   }
-
 
   input[type="reset"] {
     width: 100%;
@@ -69,5 +71,14 @@
     border: 2px solid $form-border;
     border-radius: $regular-border-radius;
     background-color: $text-area-background;
+  }
+}
+
+@include small-breakpoint {
+  .recaptcha-wrapper {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
   }
 }

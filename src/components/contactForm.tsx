@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { useMediaQuery } from "react-responsive"
 import RecaptchaForm from "../components/recaptcha"
 import useContactForm from "../hooks/useContactForm"
 
@@ -17,8 +16,6 @@ const ContactForm = (props: ContactFormProps) => {
   const handleRecaptcha = (status: boolean) => {
     setRecaptchaComplete(status)
   }
-
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" })
 
   return (
     <div>
@@ -63,10 +60,7 @@ const ContactForm = (props: ContactFormProps) => {
             value={inputs.message}
           />
         </label>
-        <RecaptchaForm
-          size={isTabletOrMobile ? "compact" : "mobile"}
-          onSubmit={handleRecaptcha}
-        />
+        <RecaptchaForm onSubmit={handleRecaptcha} />
         <button type="submit" disabled={!recaptchaComplete}>
           Submit
         </button>
