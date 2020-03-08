@@ -5,3 +5,5 @@
 This is my personal website, which is built on top of the Gatsby Typescript Starter found [here](https://www.gatsbyjs.org/starters/gperl27/Gatsby-Starter-Blog-Typescript/).
 
 To run locally, `npm install`, then `gatsby develop`, then open `http://localhost:8000`.
+
+The app is deployed to [jamescockbain.com](http://jamescockbain.com).
