@@ -1,13 +1,27 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
+import Tags from "../components/tags"
 import { MarkdownRemark } from "../graphql-types"
 
 type Props = PageRendererProps
 
 const BlogIndex = (props: Props) => {
+  const [categories, setCategories] = useState<string[]>([])
+
+  const updateCategories = (newCategories: string[]) => {
+    setCategories(newCategories)
+  }
+
+  const filterPosts = (unfilteredPosts: Array<{ node: MarkdownRemark }>) =>
+    unfilteredPosts.filter(
+      ({ node }: { node: MarkdownRemark }) =>
+        node.frontmatter!.tags &&
+        categories.every(cat => node.frontmatter!.tags!.includes(cat))
+    )
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -27,6 +41,7 @@ const BlogIndex = (props: Props) => {
               title
               description
               template
+              tags
             }
           }
         }
@@ -35,11 +50,16 @@ const BlogIndex = (props: Props) => {
   `)
 
   const posts = data.allMarkdownRemark.edges
+  const filteredPosts = filterPosts(posts)
 
   return (
     <Layout location={props.location} title="Blog Posts">
       <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      {posts.map(({ node }: { node: MarkdownRemark }) => {
+      <Tags
+        updateCategories={updateCategories}
+        currentCategories={categories}
+      />
+      {filteredPosts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
         if (frontmatter.template! !== "post") {
           return
