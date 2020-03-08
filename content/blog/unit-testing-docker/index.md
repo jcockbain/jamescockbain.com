@@ -6,4 +6,4 @@ description: Coming soon! Learning about using Golang interface to inject depend
 tags: ["golang", "testing"]
 ---
 
-I'm working on an article my findings writing unit tests in Go, specifically in mocking the Docker API.
+I'm working on an article on my findings writing unit tests in Go, specifically in mocking the Docker API.
