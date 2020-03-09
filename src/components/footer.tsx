@@ -43,11 +43,6 @@ const Footer = () => {
             medium
           </a>
         </div>
-        <div className="build-info">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </div>
       </div>
     </footer>
   )
