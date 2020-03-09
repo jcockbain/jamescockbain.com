@@ -26,6 +26,7 @@ const ContactForm = (props: ContactFormProps) => {
             type="text"
             name="name"
             id="name"
+            required={true}
             onChange={handleInputChange}
             value={inputs.name}
           />
@@ -36,6 +37,7 @@ const ContactForm = (props: ContactFormProps) => {
             type="email"
             name="email"
             id="email"
+            required={true}
             onChange={handleInputChange}
             value={inputs.email}
           />
@@ -55,6 +57,7 @@ const ContactForm = (props: ContactFormProps) => {
           <textarea
             name="message"
             id="message"
+            required={true}
             rows={5}
             onChange={handleInputChange}
             value={inputs.message}
