@@ -35,7 +35,7 @@ const Tags = ({ updateCategories, currentCategories }: TagsProps) => {
   return (
     <div className="blog-tags-panel">
       {tags.map((element: Tag) => (
-        <button
+        <div
           onClick={modifyCategories(element.tag)}
           className={`tag-selector ${
             currentCategories.includes(element.tag) ? "active" : ""
@@ -43,7 +43,7 @@ const Tags = ({ updateCategories, currentCategories }: TagsProps) => {
           key={element.tag}
         >
           {element.tag}
-        </button>
+        </div>
       ))}
     </div>
   )

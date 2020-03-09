@@ -1,6 +1,6 @@
 .blog-summary {
   border-radius: $regular-border-radius;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 
   p {
     color: $text-secondary;
@@ -23,6 +23,19 @@
   }
 }
 
+.blog-tags {
+  display: flex;
+}
+
+.blog-tag {
+  background-color: $light-primary-color;
+  color: $primary-color;
+  border-radius: $regular-border-radius;
+  padding: 0.3rem 0.5rem;
+  margin: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+}
+
 .blog-title {
   color: $text-main;
   text-decoration: none;
@@ -31,19 +44,21 @@
 .blog-tags-panel {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.5rem;
 
   .active {
-    background-color: $hover-01;
+    background-color: $primary-color;
+    color: $background;
   }
 
-  button {
-    border-radius: $button-border-radius;
+  div {
+    border-radius: $regular-border-radius;
     cursor: pointer;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border: 2px solid $form-border;
-    background-color: $background;
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0.8rem 0.5rem 0;
+    font-size: 0.85rem;
+    background-color: $light-primary-color;
+    color: $primary-color;
+    box-shadow: none;
 
     &:hover {
       opacity: 0.8;

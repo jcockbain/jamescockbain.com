@@ -21,6 +21,10 @@ $hover-02: #f2f2f2;
 
 $text-area-background: #f8f8f8;
 
+$primary-color: #5183f5;
+
+$light-primary-color: lighten($primary-color, 32%);
+
 /* Text */
 
 $text-main: #161616;

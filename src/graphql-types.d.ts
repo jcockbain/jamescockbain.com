@@ -1388,7 +1388,7 @@ export interface MarkdownRemarkFrontmatter {
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   template?: Maybe<Scalars["String"]>
-  tags?: Maybe<Scalars["String"]>
+  tags?: Maybe<Array<Scalars["String"]>>
 }
 
 export interface MarkdownRemarkFrontmatterDateArgs {
