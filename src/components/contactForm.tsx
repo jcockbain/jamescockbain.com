@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import RecaptchaForm from "../components/recaptcha"
 import useContactForm from "../hooks/useContactForm"
+import { ContactFormInputs } from "../types"
 
 interface ContactFormProps {
-  handleSubmit: (inputs: any) => void
+  handleSubmit: (inputs: ContactFormInputs) => void
 }
 
 const ContactForm = (props: ContactFormProps) => {

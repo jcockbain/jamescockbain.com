@@ -1,6 +1,10 @@
 import React from "react"
 
-const contactFormErrorPanel = (props: any) => {
+interface Props {
+  reset: () => void
+}
+
+const contactFormErrorPanel = (props: Props) => {
   const { reset } = props
   return (
     <div className="response-panel">

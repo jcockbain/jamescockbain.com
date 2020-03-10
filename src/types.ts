@@ -5,6 +5,13 @@ interface PageInput {
   context?: any
 }
 
+export interface ContactFormInputs {
+  name: string
+  email: string
+  subject: string
+  message: string
+}
+
 interface BoundActionCreators {
   createPage: (page: PageInput) => void
   deletePage: (page: PageInput) => void

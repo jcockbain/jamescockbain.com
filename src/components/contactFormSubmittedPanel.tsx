@@ -1,7 +1,10 @@
 import React from "react"
 
-const contactFormSubmittedPanel = (props: any) => {
-  const { reset } = props
+interface Props {
+  reset: () => void
+}
+
+const contactFormSubmittedPanel = ({ reset }: Props) => {
   return (
     <div className="response-panel">
       <h2>Form Submitted &#x1F389;</h2>
