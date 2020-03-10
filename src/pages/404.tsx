@@ -17,10 +17,10 @@ export const NotFoundPage = (props: Props) => {
   `)
 
   return (
-    <Layout location={props.location} title={data.site.siteMetadata.title}>
+    <Layout location={props.location}>
       <SEO title="404: Not Found" />
       <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <p>You just hit a route that doesn&#39;t exist... </p>
     </Layout>
   )
 }
