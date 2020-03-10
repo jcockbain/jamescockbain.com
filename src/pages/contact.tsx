@@ -6,6 +6,7 @@ import LoadingPanel from "../components/contactFormLoadingPanel"
 import FormSubmittedPanel from "../components/contactFormSubmittedPanel"
 import { Layout } from "../components/layout"
 import { SEO } from "../components/seo"
+import { ContactFormInputs } from "../types"
 
 import axios from "axios"
 
@@ -16,7 +17,7 @@ const Contact = (props: Props) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
-  const signUp = (inputs: any) => {
+  const signUp = (inputs: ContactFormInputs) => {
     setLoading(true)
     axios
       .post("https://getform.io/f/2184f9ff-4f69-489d-88d5-95e3d5fcbd5d", inputs)
