@@ -1,6 +1,6 @@
 # jamescockbain.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f802fb76-5cc9-43f4-a2d0-b0d98eac8153/deploy-status)](https://app.netlify.com/sites/happy-spence-5fa372/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/f802fb76-5cc9-43f4-a2d0-b0d98eac8153/deploy-status)](https://app.netlify.com/sites/happy-spence-5fa372/deploys)
 
 This is my personal website, which is built on top of the Gatsby Typescript Starter found [here](https://www.gatsbyjs.org/starters/gperl27/Gatsby-Starter-Blog-Typescript/).
 
