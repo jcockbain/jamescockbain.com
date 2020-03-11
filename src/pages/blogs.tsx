@@ -66,7 +66,6 @@ const BlogIndex = (props: Props) => {
   return (
     <Layout location={props.location} title="Blog Posts">
       <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <h2>Filters</h2>
       <Tags
         updateCategories={updateCategories}
         currentCategories={categories}
