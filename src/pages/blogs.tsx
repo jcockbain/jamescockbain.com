@@ -10,17 +10,28 @@ type Props = PageRendererProps
 
 const BlogIndex = (props: Props) => {
   const [categories, setCategories] = useState<string[]>([])
+  const [searchTerm, setSearchTerm] = useState("")
 
   const updateCategories = (newCategories: string[]) => {
     setCategories(newCategories)
   }
 
+  const updateSearchTerm = (e: any) => {
+    setSearchTerm(e.target.value)
+  }
+
   const filterPosts = (unfilteredPosts: Array<{ node: MarkdownRemark }>) =>
-    unfilteredPosts.filter(
-      ({ node }: { node: MarkdownRemark }) =>
-        node.frontmatter!.tags &&
-        categories.every(cat => node.frontmatter!.tags!.includes(cat))
-    )
+    unfilteredPosts
+      .filter(({ node }: { node: MarkdownRemark }) =>
+        node
+          .frontmatter!.title!.toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      )
+      .filter(
+        ({ node }: { node: MarkdownRemark }) =>
+          node.frontmatter!.tags &&
+          categories.every(cat => node.frontmatter!.tags!.includes(cat))
+      )
 
   const data = useStaticQuery(graphql`
     query {
@@ -60,6 +71,16 @@ const BlogIndex = (props: Props) => {
         updateCategories={updateCategories}
         currentCategories={categories}
       />
+      <div className="search-container">
+        <input
+          className="search"
+          type="text"
+          name="searchTerm"
+          value={searchTerm}
+          placeholder="Search posts..."
+          onChange={updateSearchTerm}
+        />
+      </div>
       {filteredPosts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
         if (frontmatter.template! !== "post") {
@@ -82,7 +103,7 @@ const BlogIndex = (props: Props) => {
               />
               <div className="blog-tags">
                 {frontmatter!.tags!.map((tag: string) => (
-                  <div className="blog-tag" key="tag">
+                  <div className="blog-tag" key={tag}>
                     {tag}
                   </div>
                 ))}
