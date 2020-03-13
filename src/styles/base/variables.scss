@@ -22,8 +22,10 @@ $hover-02: #f2f2f2;
 $text-area-background: #f8f8f8;
 
 $primary-color: #5183f5;
+$font-color: #454545;
 
 $light-primary-color: lighten($primary-color, 32%);
+$light: #f2f2f2;
 
 /* Text */
 
@@ -32,7 +34,6 @@ $text-inverse: #ffffff;
 $text-secondary: rgba(0, 0, 0, 0.4);
 
 /* Borders */
-
 $subtle-border: #e0e0e0;
 $form-border: #ccc;
 
