@@ -1,35 +1,14 @@
 import { graphql, PageRendererProps } from "gatsby"
 import React from "react"
-import styled from "styled-components"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
 import { Query, SitePageContext } from "../graphql-types"
-import { rhythm, styledScale } from "../utils/typography"
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
   data: Query
 }
-
-const Date = styled.p`
-  display: block;
-  ${styledScale(-1 / 5)};
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(-1)};
-`
-
-const Divider = styled.hr`
-  margin-bottom: ${rhythm(1)};
-`
-
-const PostNavigator = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-`
 
 const BlogPostTemplate = (props: Props) => {
   const data = props.data!
@@ -38,18 +17,27 @@ const BlogPostTemplate = (props: Props) => {
   const frontmatter = post.frontmatter!
   const html = post.html!
   const { previous, next } = props.pageContext
-
   return (
     <Layout location={props.location}>
       <SEO
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <h1>{post.frontmatter!.title}</h1>
-      <Date>{frontmatter.date}</Date>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Divider />
-      <PostNavigator>
+      <h1 className="blog-title">{post.frontmatter!.title}</h1>
+      <p className="date">{frontmatter.date}</p>
+      <div className="blog-tags">
+        {frontmatter!.tags!.map((tag: string) => (
+          <div className="blog-tag" key={tag}>
+            {tag}
+          </div>
+        ))}
+      </div>
+      <div
+        className="blog-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+      <hr />
+      <ul className="post-navigator">
         <li>
           {previous && (
             <FadeLink to={previous.fields!.slug!} rel="prev">
@@ -64,7 +52,7 @@ const BlogPostTemplate = (props: Props) => {
             </FadeLink>
           )}
         </li>
-      </PostNavigator>
+      </ul>
     </Layout>
   )
 }
@@ -87,6 +75,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
