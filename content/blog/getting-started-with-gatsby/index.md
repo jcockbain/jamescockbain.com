@@ -1,6 +1,6 @@
 ---
 title: Getting started with Gatsby
-date: 2020-03-07
+date: 2020-03-14
 template: post
 description: Coming soon! Getting to grips with Gatsby as a beginner, the first steps in starting this site.
 tags: ["frontend", "gatsby"]
