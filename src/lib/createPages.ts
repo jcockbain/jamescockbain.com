@@ -1,4 +1,5 @@
 import path from "path"
+import { MarkdownRemark } from "../graphql-types"
 import { GatsbyCreatePages } from "../types"
 
 interface Post {
@@ -8,6 +9,7 @@ interface Post {
     }
     frontmatter: {
       template: string
+      date: string
     }
   }
 }
@@ -31,6 +33,7 @@ export const createPages: GatsbyCreatePages = async ({
             }
             frontmatter {
               title
+              template
             }
           }
         }
@@ -43,26 +46,41 @@ export const createPages: GatsbyCreatePages = async ({
   }
 
   // Create blog posts pages.
-  const posts = allMarkdown.data.allMarkdownRemark.edges
+  const edges = allMarkdown.data.allMarkdownRemark.edges
 
-  posts.forEach((post: Post, index: number) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+  const blogPosts = edges.filter(
+    ({ node }: { node: MarkdownRemark }) =>
+      node.frontmatter!.template === "post"
+  )
 
-    const component = post.node.frontmatter.template
+  const pages = edges.filter(
+    ({ node }: { node: MarkdownRemark }) =>
+      node.frontmatter!.template === "page"
+  )
 
-    const pathToTemplate =
-      component === "post"
-        ? `./src/templates/blog-post.tsx`
-        : `./src/templates/page.tsx`
+  blogPosts.forEach((post: Post, index: number) => {
+    const previous =
+      index === blogPosts.length - 1 ? null : blogPosts[index + 1].node
+    const next = index === 0 ? null : blogPosts[index - 1].node
 
     createPage({
       path: post.node.fields.slug,
       // tslint:disable-next-line:object-literal-sort-keys
-      component: path.resolve(pathToTemplate),
+      component: path.resolve(`./src/templates/blog-post.tsx`),
       context: {
         next,
         previous,
+        slug: post.node.fields.slug,
+      },
+    })
+  })
+
+  pages.forEach((post: Post) => {
+    createPage({
+      path: post.node.fields.slug,
+      // tslint:disable-next-line:object-literal-sort-keys
+      component: path.resolve(`./src/templates/page.tsx`),
+      context: {
         slug: post.node.fields.slug,
       },
     })
