@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `James Cockbain`,
     author: `James Cockbain`,
-    description: `About me`,
+    description: `Personal site, made with Gatsby, React and Typescript.`,
     siteUrl: `https://jamescockbain.com/`,
     social: {
       twitter: `james_cockbain`,
