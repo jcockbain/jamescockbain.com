@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `James Cockbain`,
     author: `James Cockbain`,
-    description: `Personal site, made with Gatsby, React and Typescript.`,
+    description: `Personal site for James Cockbain, made with Gatsby, React and Typescript.`,
     siteUrl: `https://jamescockbain.com/`,
     social: {
       twitter: `james_cockbain`,
@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         name: "About",
-        link: "/pages/me",
+        link: "/pages/about-me",
       },
       {
         name: "Contact",
@@ -74,8 +74,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `jamescockbain.com`,
+        short_name: `jcockbain`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
