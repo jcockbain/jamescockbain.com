@@ -18,7 +18,7 @@ const HomePage = (props: Props) => {
       >
         <h1>Hi, I'm James &#x1f44b;</h1>
         <p>I'm a software developer, working for IBM.</p>
-        <img src={ProfilePic} alt="a nice picture of me" />
+        <img src={ProfilePic} alt="A picture of me!" />
         <p>
           You can read more about me, and why I started this site,{" "}
           <FadeLink to="/pages/me">here</FadeLink>.
