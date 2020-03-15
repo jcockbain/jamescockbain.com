@@ -1,6 +1,6 @@
 ---
 title: Unit testing the Docker API in Golang
-date: 2020-03-21
+date: 2020-04-01
 template: post
 description: Coming soon! Learning about using Golang interface to inject dependency, and applying this with the Docker API.
 tags: ["golang", "testing"]

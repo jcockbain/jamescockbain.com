@@ -16,6 +16,7 @@ const BlogPostTemplate = (props: Props) => {
   const excerpt = post.excerpt!
   const frontmatter = post.frontmatter!
   const html = post.html!
+  const timeToRead = post.timeToRead
   const { previous, next } = props.pageContext
   return (
     <Layout location={props.location}>
@@ -24,7 +25,10 @@ const BlogPostTemplate = (props: Props) => {
         description={frontmatter.description || excerpt}
       />
       <h1 className="blog-title">{post.frontmatter!.title}</h1>
-      <p className="date">{frontmatter.date}</p>
+      <p className="date">
+        {`${frontmatter.date} `} &bull;
+        {` ${timeToRead} min read`}
+      </p>
       <div className="blog-tags">
         {frontmatter!.tags!.map((tag: string) => (
           <div className="blog-tag" key={tag}>
@@ -71,6 +75,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

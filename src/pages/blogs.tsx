@@ -47,6 +47,7 @@ const BlogIndex = (props: Props) => {
             fields {
               slug
             }
+            timeToRead
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
@@ -94,7 +95,10 @@ const BlogIndex = (props: Props) => {
           <FadeLink key={slug} className="blog-title" to={slug}>
             <div className="blog-summary">
               <h3>{title}</h3>
-              <small className="date">{frontmatter.date}</small>
+              <small className="date">
+                {`${frontmatter.date} `} &bull;
+                {` ${node.timeToRead} min read`}
+              </small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: frontmatter.description || excerpt,
