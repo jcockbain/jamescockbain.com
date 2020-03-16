@@ -21,7 +21,7 @@ const HomePage = (props: Props) => {
         <img src={ProfilePic} alt="A picture of me!" />
         <p>
           You can read more about me, and why I started this site,{" "}
-          <FadeLink to="/pages/me">here</FadeLink>.
+          <FadeLink to="/pages/about-me">here</FadeLink>.
         </p>
       </div>
     </Layout>
