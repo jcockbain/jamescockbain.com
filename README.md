@@ -6,4 +6,4 @@ This is my personal website, which is built on top of the Gatsby Typescript Star
 
 To run locally, `npm install`, then `gatsby develop`, then open `http://localhost:8000`.
 
-The app is deployed to [jamescockbain.com](http://jamescockbain.com).
+The app is deployed to [jamescockbain.com](http://jamescockbain.com) with Netlify.
