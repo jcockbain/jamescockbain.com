@@ -12,32 +12,32 @@ The plan is to look at the methods of CRUD operations on these structures, and t
 
 A canine based example would be:
 
-```Javascript
+```javascript{numberLines: true}
 [
   {
     name: "Frank",
-    breed: "Poodle",
+    breed: "Labrador",
     age: 12,
   },
   {
-    name: "Dave",
-    breed: "Jack Russell",
-    age: 7,
+    name: "Minty",
+    breed: "Westipoo",
+    age: 2,
   },
 ]
 ```
 
 vs
 
-```Javascript
+```javascript{numberLines: true}
 {
   "Frank": {
-    breed: "Poodle",
+    breed: "Labrador",
     age: 12,
   },
-  "Dave": {
-    breed: "Jack Russell",
-    age: 7,
+  "Minty": {
+    breed: "Westipoo",
+    age: 2,
   },
 }
 ```
