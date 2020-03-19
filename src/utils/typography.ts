@@ -2,8 +2,17 @@ import { CSSObject } from "styled-components"
 import Typography from "typography"
 
 const typography = new Typography({
-  bodyFontFamily: ["Avenir Next", "Helvetica Neue", "Segoe UI"],
+  bodyFontFamily: [
+    "Nunito",
+    "Avenir Next",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
   headerFontFamily: [
+    "Nunito",
     "Avenir Next",
     "Helvetica Neue",
     "Segoe UI",
