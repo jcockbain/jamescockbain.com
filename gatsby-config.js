@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `James Cockbain`,
-    author: `James Cockbain`,
-    description: `Personal site for James Cockbain, made with Gatsby, React and Typescript.`,
+    title: "James Cockbain",
+    author: "James Cockbain",
+    description: `Personal site and blog for James Cockbain, IBM software developer.`,
     siteUrl: `https://jamescockbain.com/`,
     social: {
       twitter: `james_cockbain`,
@@ -12,16 +12,16 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: "Blog",
         link: "/blogs",
+        name: "Blog",
       },
       {
-        name: "About",
         link: "/pages/about-me",
+        name: "About",
       },
       {
-        name: "Contact",
         link: "/contact",
+        name: "Contact",
       },
     ],
   },
