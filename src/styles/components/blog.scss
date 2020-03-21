@@ -37,6 +37,12 @@ blockquote p {
   overflow: auto;
 }
 
+:not(pre) > code[class*="language-"] {
+  background: #f5f2f0 !important;
+  color: black;
+  font-weight: bold;
+}
+
 .filename {
   background: black;
   padding: 0.5rem 1rem 0.75rem;

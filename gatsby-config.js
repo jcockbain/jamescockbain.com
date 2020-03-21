@@ -58,7 +58,9 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {},
+            options: {
+              inlineCodeMarker: ">",
+            },
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
