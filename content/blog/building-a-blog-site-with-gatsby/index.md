@@ -2,7 +2,7 @@
 title: Building a blog site with Gatsby
 date: 2020-03-18
 template: post
-description: Getting to grips with Gatsby as a beginner, the first steps in starting this site.
+description: Rendering pages from Markdown, adding a contact form with reCAPTCHA, and filtering articles by tags; on a Gatsby blog site, written in Typescript.
 tags: ["gatsby", "javascript", "react"]
 ---
 
