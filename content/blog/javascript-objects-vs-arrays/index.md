@@ -12,8 +12,10 @@ The plan is to look at the methods of CRUD operations on these structures, and t
 
 A canine based example would be:
 
+<div class="filename">dogArray.js</div>
+
 ```javascript{numberLines: true}
-[
+const dogs = [
   {
     name: "Frank",
     breed: "Labrador",
@@ -29,13 +31,15 @@ A canine based example would be:
 
 vs
 
+<div class="filename">dogObject.js</div>
+
 ```javascript{numberLines: true}
-{
-  "Frank": {
+const dogs = {
+  Frank: {
     breed: "Labrador",
     age: 12,
   },
-  "Minty": {
+  Minty: {
     breed: "Westipoo",
     age: 2,
   },
