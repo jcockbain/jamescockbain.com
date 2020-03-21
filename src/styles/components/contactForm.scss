@@ -45,6 +45,8 @@
 }
 
 .contact-form {
+  margin-bottom: 0;
+
   input[type="text"],
   input[type="email"] {
     width: 100%;
@@ -60,6 +62,7 @@
     cursor: pointer;
     border-radius: $regular-border-radius;
     padding: 12px 20px;
+    margin: 8px 0;
   }
 
   textarea {
@@ -69,6 +72,7 @@
     border: 2px solid $form-border;
     border-radius: $regular-border-radius;
     background-color: $text-area-background;
+    margin: 8px 0;
   }
 }
 
