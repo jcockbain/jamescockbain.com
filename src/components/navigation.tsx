@@ -46,7 +46,7 @@ const Navigation = () => {
   return (
     <nav className={isScrolledDown ? "nav scroll" : "nav"}>
       <div className="nav-container">
-        <div className="home">
+        <div className="links">
           <FadeLink to="/">&#x1f3e0; Home</FadeLink>
         </div>
         {links}

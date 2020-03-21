@@ -8,6 +8,7 @@ import { rhythm } from "../utils/typography"
 interface Props extends PageRendererProps {
   children: ReactNode
   title?: string | null
+  titleEmoji?: string | null
 }
 
 const Content = styled.div`
@@ -18,13 +19,15 @@ const Content = styled.div`
 `
 
 export const Layout = (props: Props) => {
-  const { children, title } = props
+  const { children, title, titleEmoji } = props
 
   return (
     <Content>
       <Navigation />
       <main id="main-content">
-        <h1 className="page-title">{title}</h1>
+        <h1 className="page-title">
+          {title} {titleEmoji}
+        </h1>
         {children}
       </main>
       <Footer />

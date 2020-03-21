@@ -18,16 +18,17 @@ body {
 }
 
 .container {
+  text-align: left;
+
+  img {
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: block;
+  }
+
   h1,
   h2 {
     margin: 0.5rem 0;
-  }
-
-  img {
-    display: block;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 2rem;
   }
 }
 
@@ -60,7 +61,7 @@ footer {
 
   .container {
     img {
-      width: 50%;
+      width: 60%;
     }
   }
 
