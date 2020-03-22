@@ -1,9 +1,14 @@
-html {
-  background-color: $background;
+.lightTheme {
+  background: $background;
 }
 
 body {
   font-size: 1rem;
+}
+
+.content {
+  height: 100%;
+  margin-bottom: 0;
 }
 
 #main-content {
@@ -14,7 +19,7 @@ body {
 }
 
 .date {
-  color: $text-secondary;
+  color: $on-background-secondary;
 }
 
 .container {
@@ -23,6 +28,8 @@ body {
   img {
     border-radius: 10px;
     margin-bottom: 2rem;
+    // margin-left: auto;
+    // margin-right: auto;
     display: block;
   }
 
@@ -54,7 +61,7 @@ footer {
 
 @include small-breakpoint {
   #main-content {
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 10px 0 0 0;
     min-height: calc(100vh - 219px);
   }

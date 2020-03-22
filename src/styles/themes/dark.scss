@@ -1,0 +1,108 @@
+.darkTheme {
+  background: $dark-background;
+  color: $dark-on-background;
+
+  html {
+    background-color: $dark-background;
+  }
+
+  a {
+    color: $dark-primary;
+  }
+
+  h1 {
+    color: $dark-on-background;
+  }
+
+  .nav {
+    background: $dark-background;
+
+    &.scroll {
+      background: darken($dark-background, 5%);
+      border-color: darken($dark-background, 5%);
+    }
+  }
+
+  .nav-container {
+    .links,
+    .home {
+      a {
+        color: $dark-on-background;
+
+        &:hover,
+        &.active {
+          background-color: $dark-hover;
+        }
+      }
+    }
+  }
+
+  .date {
+    color: $dark-grey;
+  }
+
+  .blog-summary {
+    h3 {
+      color: $dark-on-background;
+    }
+
+    p {
+      color: $dark-grey;
+    }
+
+    &:hover {
+      background-color: $dark-hover;
+    }
+  }
+
+  .search {
+    background-color: $black;
+    color: $dark-on-background;
+    border: 2px solid $dark-grey;
+  }
+
+  .form-container {
+    background-color: $dark-background;
+    border: 2px solid $black;
+
+    button {
+      background-color: $dark-primary;
+      border: none;
+      color: $dark-on-primary;
+
+      &:enabled {
+        cursor: pointer;
+        &:hover,
+        &:active {
+          background-color: $dark-primary;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background-color: $dark-surface;
+      border: none;
+      color: $dark-on-background;
+    }
+  }
+
+  .blog-tag {
+    background-color: $dark-secondary;
+  }
+
+  .tag-selector {
+    background-color: $dark-secondary;
+    color: $on-primary;
+  }
+
+  .blog-tags-panel {
+    .active {
+      background-color: $dark-primary;
+    }
+  }
+}

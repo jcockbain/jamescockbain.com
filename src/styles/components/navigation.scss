@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: $background;
+  background: $navbar-color;
   z-index: 3;
 
   &.scroll {
@@ -23,14 +23,23 @@
   .links {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     height: 100%;
     margin: 0;
+  }
 
+  .home {
+    display: flex;
+  }
+
+  .links,
+  .home {
     a {
       display: flex;
       align-items: center;
-      color: $text-main;
+      color: $on-primary;
       margin: 0.2rem;
       padding: 0.5rem;
       font-size: 1rem;
@@ -41,9 +50,36 @@
 
       &:hover,
       &.active {
-        background-color: $hover-02;
+        background-color: $hover;
       }
     }
+  }
+
+  .theme-icon {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 0;
+  }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 0.75rem;
+    height: 100%;
+  }
+}
+
+button.theme-switcher {
+  display: flex;
+  border: 0;
+  margin: 0.2rem;
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  align-items: center;
+
+  &:hover,
+  &.active {
+    cursor: pointer;
   }
 }
 
@@ -54,7 +90,9 @@
       padding: 0 2rem;
     }
     .links {
-      a {
+      flex-direction: row;
+      justify-content: flex-end;
+      height: 100% a {
         font-size: 1.2rem;
         padding: 0.8rem;
       }

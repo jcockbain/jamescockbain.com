@@ -1,4 +1,5 @@
 import React from "react"
+import { ThemeContext } from "../context/themeProvider"
 
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -15,14 +16,21 @@ const recaptcha = (props: any) => {
   }
 
   return (
-    <div className="recaptcha-wrapper">
-      <ReCAPTCHA
-        sitekey={recaptchaKey}
-        style={{ display: "inline-block" }}
-        onChange={submitTrue}
-        onExpired={submitFalse}
-      />
-    </div>
+    <ThemeContext.Consumer>
+      {context => {
+        return (
+          <div className="recaptcha-wrapper">
+            <ReCAPTCHA
+              sitekey={recaptchaKey}
+              theme={context.isDark ? "dark" : "light"}
+              style={{ display: "inline-block" }}
+              onChange={submitTrue}
+              onExpired={submitFalse}
+            />
+          </div>
+        )
+      }}
+    </ThemeContext.Consumer>
   )
 }
 
