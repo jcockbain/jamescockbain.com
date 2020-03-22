@@ -1,6 +1,6 @@
 .form-container {
   border-radius: $regular-border-radius;
-  background-color: $container-background;
+  background-color: $surface;
   padding: 20px;
   border: 2px solid $form-border;
 
@@ -17,7 +17,7 @@
     border: 2px solid $form-border;
     border-radius: $button-border-radius;
     padding: 12px 20px;
-    color: $text-main;
+    color: $on-primary;
     background-color: $background;
 
     &:enabled {
@@ -25,7 +25,7 @@
 
       &:hover,
       &:active {
-        background: $hover-01;
+        background: $hover;
         opacity: 0.9;
       }
     }
@@ -53,15 +53,6 @@
     padding: 12px 20px;
     border: 2px solid $form-border;
     border-radius: $regular-border-radius;
-    margin: 8px 0;
-  }
-
-  input[type="reset"] {
-    width: 100%;
-    margin-top: 12px;
-    cursor: pointer;
-    border-radius: $regular-border-radius;
-    padding: 12px 20px;
     margin: 8px 0;
   }
 

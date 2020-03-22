@@ -1,8 +1,11 @@
-import { PageRendererProps } from "gatsby"
-import React, { ReactNode } from "react"
-import styled from "styled-components"
 import Footer from "../components/footer"
 import Navigation from "../components/navigation"
+import { PageRendererProps } from "gatsby"
+import React, { ReactNode } from "react"
+import Helmet from "react-helmet"
+import styled from "styled-components"
+
+import { ThemeContext } from "../context/themeProvider"
 import { rhythm } from "../utils/typography"
 
 interface Props extends PageRendererProps {
@@ -22,15 +25,34 @@ export const Layout = (props: Props) => {
   const { children, title, titleEmoji } = props
 
   return (
-    <Content>
-      <Navigation />
-      <main id="main-content">
-        <h1 className="page-title">
-          {title} {titleEmoji}
-        </h1>
-        {children}
-      </main>
-      <Footer />
-    </Content>
+    <ThemeContext.Consumer>
+      {context => {
+        const themeClass = context.isDark
+          ? "content darkTheme"
+          : "content lightTheme"
+        return (
+          <>
+            <Helmet
+              bodyAttributes={{
+                class: `theme ${themeClass}`,
+              }}
+            />
+            <Content>
+              <Navigation
+                changeTheme={() => context.changeTheme()}
+                isDark={context.isDark}
+              />
+              <main id="main-content">
+                <h1 className="page-title">
+                  {title} {titleEmoji}
+                </h1>
+                {children}
+              </main>
+              <Footer />
+            </Content>
+          </>
+        )
+      }}
+    </ThemeContext.Consumer>
   )
 }

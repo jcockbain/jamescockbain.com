@@ -3,23 +3,23 @@
   padding: 0.5rem;
 
   p {
-    color: $text-secondary;
+    color: $on-background-secondary;
     font-weight: 400;
     margin-bottom: 0.5rem;
   }
 
   h3 {
     margin: 0.2rem 0;
-    color: $text-main;
+    color: $on-background;
     text-decoration: none;
   }
 
   .date {
-    color: $text-secondary;
+    color: $on-background-secondary;
   }
 
   &:hover {
-    background-color: $hover-02;
+    background-color: $hover;
   }
 }
 
@@ -38,19 +38,33 @@
 }
 
 .blog-tag {
-  background-color: #f2f2f2;
-  color: lighten($font-color, 10%);
+  background-color: $inline-tag-color;
+  color: $on-secondary;
   border-radius: $regular-border-radius;
-  background-color: $light-primary-color;
-  color: $primary-color;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0.3rem 0.5rem;
   font-size: 0.8rem;
 }
 
 .blog-title {
-  color: $text-main;
+  color: $on-background;
   text-decoration: none;
+}
+
+.tag-selector {
+  background-color: $tag-color;
+  color: $on-secondary;
+
+  border-radius: $regular-border-radius;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem 0.8rem 0.5rem 0;
+  font-size: 0.85rem;
+  box-shadow: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .blog-tags-panel {
@@ -58,22 +72,6 @@
   flex-wrap: wrap;
 
   .active {
-    background-color: $primary-color;
-    color: $background;
-  }
-
-  div {
-    border-radius: $regular-border-radius;
-    cursor: pointer;
-    padding: 0.5rem 0.7rem;
-    margin: 0.5rem 0.8rem 0.5rem 0;
-    font-size: 0.85rem;
-    background-color: #f2f2f2;
-    color: lighten($font-color, 10%);
-    box-shadow: none;
-
-    &:hover {
-      opacity: 0.8;
-    }
+    background-color: $selected-tag;
   }
 }

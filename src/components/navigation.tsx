@@ -1,5 +1,7 @@
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { graphql, useStaticQuery } from "gatsby"
+import Moon from "../assets/svg/moon.svg"
+import Sun from "../assets/svg/sun.svg"
 import { FadeLink } from "./link"
 
 import React, { useState } from "react"
@@ -9,7 +11,7 @@ interface Link {
   link: string
 }
 
-const Navigation = () => {
+const Navigation = ({ changeTheme, isDark }) => {
   const [isScrolledDown, setIsScrolledDown] = useState(false)
 
   useScrollPosition(({ prevPos, currPos }) => {
@@ -43,13 +45,24 @@ const Navigation = () => {
     </div>
   )
 
+  const themeIcon = isDark ? (
+    <img src={Sun} className="theme-icon" alt="Dark mode" />
+  ) : (
+    <img src={Moon} className="theme-icon" alt="Light mode" />
+  )
+
   return (
     <nav className={isScrolledDown ? "nav scroll" : "nav"}>
       <div className="nav-container">
-        <div className="links">
+        <div className="home">
           <FadeLink to="/">&#x1f3e0; Home</FadeLink>
         </div>
         {links}
+        <div className="theme-toggle">
+          <button onClick={changeTheme} className="theme-switcher">
+            {themeIcon}
+          </button>
+        </div>
       </div>
       <div />
     </nav>
