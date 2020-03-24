@@ -1,18 +1,24 @@
 import React, { useState } from "react"
 
 export const ThemeContext = React.createContext({
-  changeTheme: () => {},
   isDark: false,
+  toggleTheme: () => {},
 })
 
 const ThemeProvider = props => {
-  const [isDark, setTheme] = useState(false)
+  const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark")
+
+  const toggleTheme = () => {
+    const newTheme = isDark ? "light" : "dark"
+    localStorage.setItem("theme", newTheme)
+    setIsDark(!isDark)
+  }
 
   return (
     <ThemeContext.Provider
       value={{
         isDark,
-        changeTheme: () => setTheme(!isDark),
+        toggleTheme,
       }}
     >
       {props.children}
