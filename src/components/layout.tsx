@@ -1,9 +1,9 @@
-import Footer from "../components/footer"
-import Navigation from "../components/navigation"
 import { PageRendererProps } from "gatsby"
-import React, { ReactNode } from "react"
+import React, { ReactNode, useContext } from "react"
 import Helmet from "react-helmet"
 import styled from "styled-components"
+import Footer from "../components/footer"
+import Navigation from "../components/navigation"
 
 import { ThemeContext } from "../context/themeProvider"
 import { rhythm } from "../utils/typography"
@@ -23,36 +23,26 @@ const Content = styled.div`
 
 export const Layout = (props: Props) => {
   const { children, title, titleEmoji } = props
+  const { isDark, toggleTheme } = useContext(ThemeContext)
 
+  const themeClass = isDark ? "content darkTheme" : "content lightTheme"
   return (
-    <ThemeContext.Consumer>
-      {context => {
-        const themeClass = context.isDark
-          ? "content darkTheme"
-          : "content lightTheme"
-        return (
-          <>
-            <Helmet
-              bodyAttributes={{
-                class: `theme ${themeClass}`,
-              }}
-            />
-            <Content>
-              <Navigation
-                changeTheme={() => context.changeTheme()}
-                isDark={context.isDark}
-              />
-              <main id="main-content">
-                <h1 className="page-title">
-                  {title} {titleEmoji}
-                </h1>
-                {children}
-              </main>
-              <Footer />
-            </Content>
-          </>
-        )
-      }}
-    </ThemeContext.Consumer>
+    <>
+      <Helmet
+        bodyAttributes={{
+          class: `theme ${themeClass}`,
+        }}
+      />
+      <Content>
+        <Navigation changeTheme={toggleTheme} isDark={isDark} />
+        <main id="main-content">
+          <h1 className="page-title">
+            {title} {titleEmoji}
+          </h1>
+          {children}
+        </main>
+        <Footer />
+      </Content>
+    </>
   )
 }
