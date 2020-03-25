@@ -12,8 +12,8 @@
   }
 
   .nav-container {
-    height: 50px;
-    padding: 0.2rem 0.4rem;
+    height: 60px;
+    padding: 0.2rem 0.3rem;
     margin: auto;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
   .links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex: 1;
     height: 100%;
@@ -42,7 +42,7 @@
       align-items: center;
       color: $on-primary;
       margin: 0.2rem;
-      padding: 0.5rem;
+      padding: 0.2rem;
       font-size: 1rem;
       text-decoration: none;
       box-shadow: none;
@@ -65,7 +65,7 @@
   .theme-toggle {
     display: flex;
     align-items: center;
-    margin: 0 0 0 0.75rem;
+    margin: 0 0 0 0.5rem;
     height: 100%;
   }
 }
@@ -87,16 +87,17 @@ button.theme-switcher {
 @include small-breakpoint {
   .nav {
     .nav-container {
-      height: 50px;
+      height: 70px;
       padding: 0 2rem;
     }
     .links {
-      flex-direction: row;
-      justify-content: flex-end;
-      height: 100% a {
+      a {
         font-size: 1.2rem;
         padding: 0.8rem;
       }
+      flex-direction: row;
+      padding: 0.5rem;
+      height: 100%;
     }
 
     .home {
