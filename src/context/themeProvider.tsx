@@ -5,7 +5,11 @@ export const ThemeContext = React.createContext({
   toggleTheme: () => {},
 })
 
-const ThemeProvider = props => {
+interface Props {
+  children: any
+}
+
+const ThemeProvider = ({ children }: Props) => {
   const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark")
 
   const toggleTheme = () => {
@@ -21,9 +25,9 @@ const ThemeProvider = props => {
         toggleTheme,
       }}
     >
-      {props.children}
+      {children}
     </ThemeContext.Provider>
   )
 }
 
-export default ({ element }) => <ThemeProvider>{element}</ThemeProvider>
+export default ({ element }: any) => <ThemeProvider>{element}</ThemeProvider>

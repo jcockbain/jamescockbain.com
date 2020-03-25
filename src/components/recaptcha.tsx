@@ -3,8 +3,11 @@ import { ThemeContext } from "../context/themeProvider"
 
 import ReCAPTCHA from "react-google-recaptcha"
 
-const recaptcha = (props: any) => {
-  const { onSubmit } = props
+interface Props {
+  onSubmit: (status: boolean) => void
+}
+
+const Recaptcha = ({ onSubmit }: Props) => {
   const recaptchaKey = process.env.GATSBY_RECAPTCHA_KEY || "no_key"
 
   const { isDark } = useContext(ThemeContext)
@@ -30,4 +33,4 @@ const recaptcha = (props: any) => {
   )
 }
 
-export default recaptcha
+export default Recaptcha

@@ -6,12 +6,12 @@ interface Tag {
   totalCount: number
 }
 
-interface TagsProps {
+interface Props {
   updateCategories: (categories: string[]) => void
   currentCategories: string[]
 }
 
-const Tags = ({ updateCategories, currentCategories }: TagsProps) => {
+const Tags = ({ updateCategories, currentCategories }: Props) => {
   const pageQuery = graphql`
     query {
       allMarkdownRemark {

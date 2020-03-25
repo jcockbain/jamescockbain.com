@@ -11,7 +11,12 @@ interface Link {
   link: string
 }
 
-const Navigation = ({ changeTheme, isDark }) => {
+interface Props {
+  changeTheme: () => void
+  isDark: boolean
+}
+
+const Navigation = ({ changeTheme, isDark }: Props) => {
   const [isScrolledDown, setIsScrolledDown] = useState(false)
 
   useScrollPosition(({ prevPos, currPos }) => {
