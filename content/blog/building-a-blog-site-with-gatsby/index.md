@@ -8,7 +8,6 @@ tags: ["gatsby", "javascript", "react"]
 
 Hello!
 This short post is going to summarise the work I've done on this site, up to now.
-I'm still making tweaks to this article, but wanted to put it up as the site was looking pretty bare.
 If you have any feedback, on the site or the post, please let me know!
 
 ## Getting Started
