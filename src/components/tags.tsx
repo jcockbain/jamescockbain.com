@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import Badge from "react-bootstrap/badge"
 
 interface Tag {
   tag: string
@@ -35,7 +36,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
   return (
     <div className="blog-tags-panel">
       {tags.map((element: Tag) => (
-        <div
+        <Badge
           onClick={modifyCategories(element.tag)}
           className={`tag-selector ${
             currentCategories.includes(element.tag) ? "active" : ""
@@ -43,7 +44,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
           key={element.tag}
         >
           {element.tag}
-        </div>
+        </Badge>
       ))}
     </div>
   )

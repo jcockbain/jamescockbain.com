@@ -36,7 +36,7 @@ export const Layout = (props: Props) => {
       <Content>
         <Navigation changeTheme={toggleTheme} isDark={isDark} />
         <main id="main-content">
-          <h1 className="page-title">
+          <h1 className="page-title pb-3">
             {title} {titleEmoji}
           </h1>
           {children}

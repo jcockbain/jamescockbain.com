@@ -1,4 +1,7 @@
 import React, { useState } from "react"
+import Button from "react-bootstrap/Button"
+import Card from "react-bootstrap/Card"
+import Form from "react-bootstrap/Form"
 import RecaptchaForm from "../components/recaptcha"
 import useContactForm from "../hooks/useContactForm"
 import { ContactFormInputs } from "../types"
@@ -18,57 +21,55 @@ const ContactForm = (props: ContactFormProps) => {
     setRecaptchaComplete(status)
   }
 
+  console.log(inputs)
+
   return (
-    <div>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <label>
-          Name
-          <input
-            type="text"
-            name="name"
-            id="name"
+    <div className="p-4">
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="name">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
             required={true}
+            type="text"
+            placeholder="Enter Name"
             onChange={handleInputChange}
-            value={inputs.name}
+            // value={inputs.name}
           />
-        </label>
-        <label>
-          Email
-          <input
+        </Form.Group>
+        <Form.Group controlId="email">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            required={true}
             type="email"
-            name="email"
-            id="email"
-            required={true}
+            placeholder="Enter Email"
             onChange={handleInputChange}
-            value={inputs.email}
+            // value={inputs.email}
           />
-        </label>
-        <label>
-          Subject
-          <input
+        </Form.Group>
+        <Form.Group controlId="subject">
+          <Form.Label>Subject</Form.Label>
+          <Form.Control
+            required={false}
             type="text"
-            name="subject"
-            id="subject"
+            placeholder="Enter Subject"
             onChange={handleInputChange}
-            value={inputs.subject}
           />
-        </label>
-        <label>
-          Message
-          <textarea
-            name="message"
-            id="message"
-            required={true}
-            rows={5}
-            onChange={handleInputChange}
-            value={inputs.message}
-          />
-        </label>
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Message</Form.Label>
+          <Form.Control as="textarea" onChange={handleInputChange} rows="5" />
+        </Form.Group>
         <RecaptchaForm onSubmit={handleRecaptcha} />
-        <button type="submit" disabled={!recaptchaComplete}>
+        <Button
+          className="primary btn"
+          variant="primary"
+          type="submit"
+          size="lg"
+          // disabled={!recaptchaComplete}
+        >
           Submit
-        </button>
-      </form>
+        </Button>
+      </Form>
     </div>
   )
 }

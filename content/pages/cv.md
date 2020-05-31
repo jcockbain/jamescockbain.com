@@ -3,9 +3,9 @@ title: CV
 template: page
 ---
 
-### Experience
+## Experience
 
-#### Software Developer, IBM
+### Software Developer, IBM
 
 > September 2018 - present
 
@@ -16,7 +16,7 @@ I’m currently a developer with IBM Hybrid Cloud, working on open-source toolin
 - Implementing a Golang CLI as an interface to the product.
 - Using Test Driven Development with Mocha, Jest and Go testing libraries to deliver features across the products. -->
 
-#### Extreme Blue Technical Intern, IBM
+### Extreme Blue Technical Intern, IBM
 
 > June 2017 - September 2017
 
@@ -33,20 +33,20 @@ I was part of an agile team of 5 interns to analyse, plan and develop a technica
 - STEM Insight-Program Intern, Teach First
   > March 2017 - April 2017 -->
 
-### Education
+## Education
 
-#### MPhys in Physics, Durham University, First Class Honors
+### MPhys in Physics, Durham University, First Class Honors
 
 > September 2014 - June 2018
 
 Masters project: UAVs with precise position knowledge - Developing mathematical models in Python to combine data from different sensors onboard a drone, with the aim of locating its position to within 1mm, for use in adaptive optics within astronomy.
 
-### Technical Skills
+## Technical Skills
 
-#### Strong
+### Strong
 
 JavaScript, Node.js, Python, Docker, Git
 
-#### Knowledgeable
+### Knowledgeable
 
 React, Golang, Kubernetes, HTML/CSS/Bootstrap, Jekyll/Gatsby, Express

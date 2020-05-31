@@ -1,6 +1,6 @@
 .darkTheme {
   background: $dark-background;
-  color: $dark-on-background;
+  // color: $dark-on-background;
 
   html {
     background-color: $dark-background;
@@ -14,12 +14,14 @@
     color: $dark-on-background;
   }
 
-  p, .footerLinks {
+  p,
+  .footerLinks {
     color: $dark-on-background;
     opacity: 0.6;
   }
 
-  h3, h2 {
+  h3,
+  h2 {
     color: $dark-on-background;
     opacity: 0.87;
   }
@@ -31,25 +33,19 @@
       background: lighten($dark-surface, 3%);
       border-color: lighten($dark-surface, 3%);
     }
-  }
 
-  .nav-container {
-    .links,
     .home {
-      a {
-        color: $dark-on-background;
+      color: $dark-on-background;
+    }
 
-        &:hover,
-        &.active {
-          background-color: $dark-hover;
-        }
-      }
+    .link {
+      color: $dark-on-background;
     }
   }
 
   .date {
     color: $dark-on-background;
-    opacity: 0.60;
+    opacity: 0.6;
   }
 
   .blog-summary {

@@ -6,6 +6,9 @@ import { SEO } from "../components/seo"
 import Tags from "../components/tags"
 import { MarkdownRemark } from "../graphql-types"
 
+import Badge from "react-bootstrap/Badge"
+import Card from "react-bootstrap/Card"
+
 type Props = PageRendererProps
 
 const BlogIndex = (props: Props) => {
@@ -81,40 +84,44 @@ const BlogIndex = (props: Props) => {
           onChange={updateSearchTerm}
         />
       </div>
-      {filteredPosts.map(({ node }: { node: MarkdownRemark }) => {
-        const frontmatter = node!.frontmatter!
-        if (frontmatter.template! !== "post") {
-          return
-        }
-        const fields = node!.fields!
-        const slug = fields.slug!
-        const excerpt = node!.excerpt!
+      <div className="container">
+        {filteredPosts.map(({ node }: { node: MarkdownRemark }) => {
+          const frontmatter = node!.frontmatter!
+          if (frontmatter.template! !== "post") {
+            return
+          }
+          const fields = node!.fields!
+          const slug = fields.slug!
+          const excerpt = node!.excerpt!
 
-        const title = frontmatter.title || fields.slug
-        return (
-          <FadeLink key={slug} className="blog-title" to={slug}>
-            <div className="blog-summary">
-              <h3>{title}</h3>
-              <small className="date">
-                {`${frontmatter.date} `} &bull;
-                {` ${node.timeToRead} min read`}
-              </small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: frontmatter.description || excerpt,
-                }}
-              />
-              <div className="blog-tags">
-                {frontmatter!.tags!.map((tag: string) => (
-                  <div className="blog-tag" key={tag}>
-                    {tag}
+          const title = frontmatter.title || fields.slug
+          return (
+            <FadeLink key={slug} className="blog-title m-3" to={slug}>
+              <Card className="blog-summary">
+                <Card.Body>
+                  <Card.Title>{title}</Card.Title>
+                  <Card.Subtitle className="date">
+                    {`${frontmatter.date} `} &bull;
+                    {` ${node.timeToRead} min read`}
+                  </Card.Subtitle>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: frontmatter.description || excerpt,
+                    }}
+                  />
+                  <div className="blog-tags">
+                    {frontmatter!.tags!.map((tag: string) => (
+                      <Badge className="blog-tag" key={tag}>
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-          </FadeLink>
-        )
-      })}
+                </Card.Body>
+              </Card>
+            </FadeLink>
+          )
+        })}
+      </div>
     </Layout>
   )
 }

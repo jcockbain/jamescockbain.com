@@ -2,13 +2,12 @@
   "rulesDirectory": ["tslint-plugin-prettier"],
   "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
-		"exclude": [
-			"node_modules/**"
-		]
-	},
+    "exclude": ["node_modules/**"]
+  },
   "rules": {
-    "prettier": true,
+    "prettier": false,
     "interface-name": false,
-    "no-duplicate-imports": false
+    "no-duplicate-imports": false,
+    "quotemark": true
   }
 }

@@ -1,5 +1,6 @@
 import { graphql, PageRendererProps } from "gatsby"
 import React from "react"
+import Badge from "react-bootstrap/badge"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
@@ -24,20 +25,20 @@ const BlogPostTemplate = (props: Props) => {
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <h1 className="blog-title">{post.frontmatter!.title}</h1>
+      <h1 className="blog-title pb-3">{post.frontmatter!.title}</h1>
       <p className="date">
         {`${frontmatter.date} `} &bull;
         {` ${timeToRead} min read`}
       </p>
       <div className="blog-tags">
         {frontmatter!.tags!.map((tag: string) => (
-          <div className="blog-tag" key={tag}>
+          <Badge className="blog-tag" key={tag}>
             {tag}
-          </div>
+          </Badge>
         ))}
       </div>
       <div
-        className="blog-content"
+        className="blog-content pt-3"
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <hr />

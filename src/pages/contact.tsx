@@ -19,19 +19,21 @@ const Contact = (props: Props) => {
 
   const signUp = (inputs: ContactFormInputs) => {
     setLoading(true)
-    axios
-      .post("https://getform.io/f/2184f9ff-4f69-489d-88d5-95e3d5fcbd5d", inputs)
-      .then(response => {
-        setLoading(false)
-        if (response.status === 200) {
-          setSubmitted(true)
-        } else {
-          setError(true)
-        }
-      })
-      .catch(() => {
-        setError(true)
-      })
+    // axios
+    //   .post("https://getform.io/f/2184f9ff-4f69-489d-88d5-95e3d5fcbd5d", inputs)
+    //   .then(response => {
+    //     setLoading(false)
+    //     if (response.status === 200) {
+    //       setSubmitted(true)
+    //     } else {
+    //       setError(true)
+    //     }
+    //   })
+    //   .catch(() => {
+    //     setError(true)
+    //   })
+    console.log(inputs)
+    setSubmitted(true);
   }
 
   const reset = () => {
@@ -52,7 +54,7 @@ const Contact = (props: Props) => {
   return (
     <Layout location={props.location} title="Contact Me">
       <SEO title="Contact Me" />
-      <div className="form-container">{mainPanel}</div>
+      <div className="">{mainPanel}</div>
     </Layout>
   )
 }

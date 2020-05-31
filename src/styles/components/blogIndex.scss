@@ -18,9 +18,9 @@
     color: $on-background-secondary;
   }
 
-  &:hover {
-    background-color: $hover;
-  }
+  // &:hover {
+  //   background-color: $hover;
+  // }
 }
 
 .search-container {
@@ -49,6 +49,10 @@
 .blog-title {
   color: $on-background;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .tag-selector {

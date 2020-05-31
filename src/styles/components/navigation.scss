@@ -1,59 +1,16 @@
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background: $navbar-color;
-  z-index: 3;
-  overflow: hidden;
 
   &.scroll {
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
   }
 
-  .nav-container {
-    height: 60px;
-    padding: 0.2rem 0.3rem;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: height 0.3s ease;
-  }
-
-  .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 1;
-    height: 100%;
-    margin: 0;
-  }
-
   .home {
-    display: flex;
+    // color: $on-background;
   }
 
-  .links,
-  .home {
-    a {
-      display: flex;
-      align-items: center;
-      color: $on-primary;
-      margin: 0.2rem;
-      padding: 0.2rem;
-      font-size: 1rem;
-      text-decoration: none;
-      box-shadow: none;
-      border-radius: 4px;
-      line-height: 1.2;
-
-      &:hover,
-      &.active {
-        background-color: $hover;
-      }
-    }
+  .link {
+    color: $on-background;
   }
 
   .theme-icon {
@@ -86,24 +43,20 @@ button.theme-switcher {
 
 @include small-breakpoint {
   .nav {
-    .nav-container {
-      height: 70px;
-      padding: 0 2rem;
-    }
-    .links {
-      a {
-        font-size: 1.2rem;
-        padding: 0.8rem;
-      }
-      flex-direction: row;
-      padding: 0.5rem;
-      height: 100%;
-    }
+    // .links {
+    //   a {
+    //     font-size: 1.2rem;
+    //     padding: 0.8rem;
+    //   }
+    //   flex-direction: row;
+    //   padding: 0.5rem;
+    //   height: 100%;
+    // }
 
     .home {
       a {
-        font-size: 1.2rem;
-        padding: 0.8rem;
+        // font-size: 1.2rem;
+        // padding: 0.8rem;
       }
     }
   }

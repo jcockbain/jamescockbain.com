@@ -1,8 +1,11 @@
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { graphql, useStaticQuery } from "gatsby"
+import { FadeLink } from "./link"
+
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
 import Moon from "../assets/svg/moon.svg"
 import Sun from "../assets/svg/sun.svg"
-import { FadeLink } from "./link"
 
 import React, { useState } from "react"
 
@@ -40,15 +43,13 @@ const Navigation = ({ changeTheme, isDark }: Props) => {
     }
   `)
 
-  const links = (
-    <div className="links">
-      {data.site.siteMetadata.menuLinks.map((link: Link) => (
-        <FadeLink key={link.name} to={link.link} activeClassName="active">
-          {link.name}
-        </FadeLink>
-      ))}
-    </div>
-  )
+  const links = data.site.siteMetadata.menuLinks.map((link: Link) => (
+    <Nav.Link key={link.name}>
+      <FadeLink to={link.link} key={link.name} className="link">
+        {link.name}
+      </FadeLink>
+    </Nav.Link>
+  ))
 
   const themeIcon = isDark ? (
     <img src={Sun} className="theme-icon" alt="Dark mode" />
@@ -57,20 +58,22 @@ const Navigation = ({ changeTheme, isDark }: Props) => {
   )
 
   return (
-    <nav className={isScrolledDown ? "nav scroll" : "nav"}>
-      <div className="nav-container">
-        <div className="home">
-          <FadeLink to="/">&#x1f3e0; Home</FadeLink>
-        </div>
-        {links}
-        <div className="theme-toggle">
-          <button onClick={changeTheme} className="theme-switcher">
-            {themeIcon}
-          </button>
-        </div>
+    <Navbar
+      fixed="top"
+      bg={isDark ? "dark" : "light"}
+      variant={isDark ? "dark" : "light"}
+      className={isScrolledDown ? "nav scroll" : "nav"}
+    >
+      <Navbar.Brand>
+        <FadeLink to="/">&#x1f3e0;Home</FadeLink>
+      </Navbar.Brand>
+      <Nav className="ml-lg-auto">{links}</Nav>
+      <div className="theme-toggle">
+        <button onClick={changeTheme} className="theme-switcher">
+          {themeIcon}
+        </button>
       </div>
-      <div />
-    </nav>
+    </Navbar>
   )
 }
 
