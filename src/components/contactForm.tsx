@@ -28,6 +28,7 @@ const ContactForm = (props: ContactFormProps) => {
             name="name"
             id="name"
             required={true}
+            placeholder="Enter Name"
             onChange={handleInputChange}
             value={inputs.name}
           />
@@ -39,6 +40,7 @@ const ContactForm = (props: ContactFormProps) => {
             name="email"
             id="email"
             required={true}
+            placeholder="Enter Email"
             onChange={handleInputChange}
             value={inputs.email}
           />
@@ -49,6 +51,7 @@ const ContactForm = (props: ContactFormProps) => {
             type="text"
             name="subject"
             id="subject"
+            placeholder="Enter Subject"
             onChange={handleInputChange}
             value={inputs.subject}
           />
@@ -60,6 +63,7 @@ const ContactForm = (props: ContactFormProps) => {
             id="message"
             required={true}
             rows={5}
+            placeholder="Enter Message"
             onChange={handleInputChange}
             value={inputs.message}
           />

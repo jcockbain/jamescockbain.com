@@ -14,12 +14,14 @@
     color: $dark-on-background;
   }
 
-  p, .footerLinks {
+  p,
+  .footerLinks {
     color: $dark-on-background;
     opacity: 0.6;
   }
 
-  h3, h2 {
+  h3,
+  h2 {
     color: $dark-on-background;
     opacity: 0.87;
   }
@@ -38,18 +40,13 @@
     .home {
       a {
         color: $dark-on-background;
-
-        &:hover,
-        &.active {
-          background-color: $dark-hover;
-        }
       }
     }
   }
 
   .date {
     color: $dark-on-background;
-    opacity: 0.60;
+    opacity: 0.6;
   }
 
   .blog-summary {

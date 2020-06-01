@@ -49,9 +49,8 @@
       border-radius: 4px;
       line-height: 1.2;
 
-      &:hover,
-      &.active {
-        background-color: $hover;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
