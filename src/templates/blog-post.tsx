@@ -19,12 +19,11 @@ const BlogPostTemplate = (props: Props) => {
   const timeToRead = post.timeToRead
   const { previous, next } = props.pageContext
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} title={post.frontmatter!.title}>
       <SEO
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <h1 className="blog-title">{post.frontmatter!.title}</h1>
       <p className="date">
         {`${frontmatter.date} `} &bull;
         {` ${timeToRead} min read`}
