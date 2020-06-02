@@ -19,18 +19,21 @@ body {
 }
 
 .page-title {
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 .date {
   color: $on-background-secondary;
 }
 
-.container {
+.card {
   text-align: left;
+  border: 1px solid $form-border;
+  border-radius: 0.25rem;
+  background-color: $surface;
 
   img {
-    border-radius: 10px;
+    border-radius: calc(0.25rem - 1px);
     margin-bottom: 2rem;
     // margin-left: auto;
     // margin-right: auto;
@@ -41,6 +44,10 @@ body {
   h2 {
     margin: 0.5rem 0;
   }
+}
+
+.card-body {
+  padding: 1.25rem;
 }
 
 footer {
@@ -70,9 +77,9 @@ footer {
     min-height: calc(100vh - 219px);
   }
 
-  .container {
+  .card {
     img {
-      width: 60%;
+      width: 100%;
     }
   }
 
