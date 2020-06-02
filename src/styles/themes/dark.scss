@@ -25,6 +25,11 @@
     color: $dark-on-background;
     opacity: 0.87;
   }
+  
+  .card {
+    background-color: $dark-surface;
+    border-color: black
+  }
 
   .nav {
     background: $dark-surface;
