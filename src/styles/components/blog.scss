@@ -1,5 +1,32 @@
 .blog-content {
   margin-top: 1rem;
+
+  blockquote {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
+
+    border-left: 4px solid #0073ba;
+    background-color: #edf4ff;
+  }
+
+  blockquote h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  blockquote code {
+    border-radius: 3px;
+  }
+
+  blockquote + blockquote {
+    margin-top: -5px;
+  }
 }
 
 .date {
