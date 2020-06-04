@@ -19,7 +19,7 @@ body {
 }
 
 .page-title {
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
 }
 
 .date {
@@ -35,8 +35,6 @@ body {
   img {
     border-radius: calc(0.25rem - 1px);
     margin-bottom: 2rem;
-    // margin-left: auto;
-    // margin-right: auto;
     display: block;
   }
 
@@ -75,6 +73,10 @@ footer {
     margin-top: 70px;
     padding: 10px 0 0 0;
     min-height: calc(100vh - 219px);
+  }
+
+  .page-title {
+    padding-bottom: 0.5rem;
   }
 
   .card {

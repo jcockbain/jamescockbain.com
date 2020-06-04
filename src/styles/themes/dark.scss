@@ -12,6 +12,7 @@
 
   h1 {
     color: $dark-on-background;
+    opacity: 0.87;
   }
 
   p,
@@ -25,10 +26,10 @@
     color: $dark-on-background;
     opacity: 0.87;
   }
-  
+
   .card {
     background-color: $dark-surface;
-    border-color: black
+    border-color: black;
   }
 
   .nav {
@@ -37,6 +38,14 @@
     &.scroll {
       background: lighten($dark-surface, 3%);
       border-color: lighten($dark-surface, 3%);
+    }
+  }
+
+  .blog-content {
+    blockquote {
+      border: 1px solid $form-border;
+      border-left: 4px solid $dark-primary;
+      background-color: $dark-surface;
     }
   }
 
@@ -93,6 +102,7 @@
       background-color: $dark-surface;
       border: 2px solid $black;
       color: $dark-on-background;
+      opacity: 0.6;
     }
   }
 
