@@ -10,21 +10,21 @@
     color: $dark-primary;
   }
 
-  h1 {
-    color: $dark-on-background;
-    opacity: 0.87;
-  }
-
-  p,
   .footerLinks {
     color: $dark-on-background;
     opacity: 0.6;
   }
 
   h3,
-  h2 {
+  h2,
+  h1 {
     color: $dark-on-background;
     opacity: 0.87;
+  }
+
+  p {
+    color: $dark-on-background;
+    opacity: 0.6;
   }
 
   .card {
@@ -107,11 +107,11 @@
   }
 
   .blog-tag {
-    background-color: $dark-secondary;
+    background-color: lighten($dark-primary, 10%);
   }
 
   .tag-selector {
-    background-color: $dark-secondary;
+    background-color: lighten($dark-primary, 10%);
     color: $on-primary;
   }
 
