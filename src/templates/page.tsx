@@ -22,7 +22,10 @@ const PageTemplate = (props: Props) => {
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div
+        className="page-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Layout>
   )
 }
@@ -34,7 +37,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -43,7 +45,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
       }
     }
