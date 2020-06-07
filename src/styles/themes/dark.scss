@@ -70,14 +70,14 @@
   }
 
   .search {
-    background-color: $black;
+    background-color: $dark-surface;
     color: $dark-on-background;
-    border: 2px solid $dark-grey;
+    border-color: $dark-grey;
   }
 
   .form-container {
     background-color: $dark-surface;
-    border: 2px solid $black;
+    border-color: black;
 
     button {
       background-color: $dark-primary;
@@ -100,7 +100,7 @@
     input[type="email"],
     textarea {
       background-color: $dark-surface;
-      border: 2px solid $black;
+      border-color: $black;
       color: $dark-on-background;
       opacity: 0.6;
     }

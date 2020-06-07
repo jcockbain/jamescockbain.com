@@ -20,9 +20,6 @@ const BlogPostTemplate = (props: Props) => {
   const timeToRead = post.timeToRead
   const { previous, next } = props.pageContext
 
-  const featuredImgFluid = post.frontmatter!.featuredImage!.childImageSharp!
-    .fluid
-
   return (
     <Layout location={props.location} title={post.frontmatter!.title}>
       <SEO
@@ -40,7 +37,7 @@ const BlogPostTemplate = (props: Props) => {
           </div>
         ))}
       </div>
-      <Img fluid={featuredImgFluid} />
+      <Img fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid} />
       <div
         className="blog-content"
         dangerouslySetInnerHTML={{ __html: html }}

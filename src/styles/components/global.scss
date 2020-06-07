@@ -14,7 +14,7 @@ body {
 #main-content {
   margin-top: 50px;
   h2 {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
 }
 
@@ -28,14 +28,16 @@ body {
 
 .card {
   text-align: left;
-  border: 1px solid $form-border;
-  border-radius: 0.25rem;
+  border: 2px solid $form-border;
+  border-radius: $regular-border-radius;
   background-color: $surface;
 
   img {
     border-radius: calc(0.25rem - 1px);
-    margin-bottom: 2rem;
-    display: block;
+  }
+
+  p {
+    margin: 1rem 0;
   }
 
   h1,
