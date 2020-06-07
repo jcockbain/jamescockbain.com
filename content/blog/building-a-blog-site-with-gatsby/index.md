@@ -3,10 +3,9 @@ title: Building a blog site with Gatsby
 date: 2020-03-18
 template: post
 description: Rendering pages from Markdown, adding a contact form with reCAPTCHA, and filtering articles by tags; on a Gatsby blog site, written in Typescript.
+featuredImage: gatsby.jpeg
 tags: ["gatsby", "javascript", "react"]
 ---
-
-![Gatsby Logo](./gatsby.jpeg)
 
 Hello!
 This short post is going to summarise the work I've done on this site, up to now.
