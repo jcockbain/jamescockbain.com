@@ -1389,6 +1389,11 @@ export interface MarkdownRemarkFrontmatter {
   description?: Maybe<Scalars["String"]>
   template?: Maybe<Scalars["String"]>
   tags?: Maybe<Array<Scalars["String"]>>
+  featuredImage?: Maybe<MarkdownRemarkFeaturedImage>
+}
+
+export interface MarkdownRemarkFeaturedImage {
+  childImageSharp?: Maybe<QueryImageSharpArgs>
 }
 
 export interface MarkdownRemarkFrontmatterDateArgs {

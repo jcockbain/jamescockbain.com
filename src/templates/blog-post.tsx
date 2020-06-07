@@ -1,4 +1,5 @@
 import { graphql, PageRendererProps } from "gatsby"
+import Img from "gatsby-image"
 import React from "react"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
@@ -18,6 +19,10 @@ const BlogPostTemplate = (props: Props) => {
   const html = post.html!
   const timeToRead = post.timeToRead
   const { previous, next } = props.pageContext
+
+  const featuredImgFluid = post.frontmatter!.featuredImage!.childImageSharp!
+    .fluid
+
   return (
     <Layout location={props.location} title={post.frontmatter!.title}>
       <SEO
@@ -35,6 +40,7 @@ const BlogPostTemplate = (props: Props) => {
           </div>
         ))}
       </div>
+      <Img fluid={featuredImgFluid} />
       <div
         className="blog-content"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -80,6 +86,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
