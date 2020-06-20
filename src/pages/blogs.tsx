@@ -1,5 +1,6 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
+import styled from "styled-components"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
@@ -7,6 +8,54 @@ import Tags from "../components/tags"
 import { MarkdownRemark } from "../graphql-types"
 
 type Props = PageRendererProps
+
+const BlogSummary = styled.div`
+  padding: 1.25rem;
+  background-color: ${props => props.theme.surface};
+  border-radius: 4px;
+  border: 2px solid ${props => props.theme.formBorder};
+
+  p {
+    color: ${props => props.theme.onBackground};
+    font-weight: 400;
+    margin: 0.5rem 0;
+  }
+
+  h3 {
+    margin-bottom: 0.75rem;
+    color: ${props => props.theme.onBackground};
+  }
+
+  .date {
+    color: ${props => props.theme.onBackground};
+  }
+`
+
+const BlogTag = styled.div`
+  background-color: ${props => props.theme.tag};
+  color: ${props => props.theme.onBackground};
+  border-radius: 4px;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+`
+
+const SearchBox = styled.div`
+  margin: 0.5rem 0;
+`
+
+const Search = styled.input`
+  padding: 0.5rem;
+  border: 2px solid ${props => props.theme.formBorder};
+  background: ${props => props.theme.surface};
+  color: ${props => props.theme.onBackground};
+  border-radius: 4px;
+`
+
+const BlogTags = styled.div`
+  display: flex;
+`
 
 const BlogIndex = (props: Props) => {
   const [categories, setCategories] = useState<string[]>([])
@@ -65,22 +114,21 @@ const BlogIndex = (props: Props) => {
   const filteredPosts = filterPosts(posts)
 
   return (
-    <Layout location={props.location} title="Blog Posts">
+    <Layout location={props.location} title="Blog">
       <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Tags
         updateCategories={updateCategories}
         currentCategories={categories}
       />
-      <div className="search-container">
-        <input
-          className="search"
+      <SearchBox>
+        <Search
           type="text"
           name="searchTerm"
           value={searchTerm}
           placeholder="Search posts..."
           onChange={updateSearchTerm}
         />
-      </div>
+      </SearchBox>
       {filteredPosts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
         if (frontmatter.template! !== "post") {
@@ -92,27 +140,25 @@ const BlogIndex = (props: Props) => {
 
         const title = frontmatter.title || fields.slug
         return (
-          <FadeLink key={slug} className="blog-title" to={slug}>
-            <div className="blog-summary">
+          <BlogSummary key={slug} className="blog-summary">
+            <FadeLink to={slug}>
               <h3>{title}</h3>
-              <small className="date">
-                {`${frontmatter.date} `} &bull;
-                {` ${node.timeToRead} min read`}
-              </small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: frontmatter.description || excerpt,
-                }}
-              />
-              <div className="blog-tags">
-                {frontmatter!.tags!.map((tag: string) => (
-                  <div className="blog-tag" key={tag}>
-                    {tag}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </FadeLink>
+            </FadeLink>
+            <small className="date">
+              {`${frontmatter.date} `} &bull;
+              {` ${node.timeToRead} min read`}
+            </small>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: frontmatter.description || excerpt,
+              }}
+            />
+            <BlogTags>
+              {frontmatter!.tags!.map((tag: string) => (
+                <BlogTag key={tag}>{tag}</BlogTag>
+              ))}
+            </BlogTags>
+          </BlogSummary>
         )
       })}
     </Layout>

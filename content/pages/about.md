@@ -1,5 +1,5 @@
 ---
-title: About me
+title: About
 template: page
 ---
 
@@ -7,9 +7,6 @@ template: page
 
 Hi, I'm James and this is my website.
 I currently work as a software developer within IBM cloud.
-
-Most recently, I've been working on an open source project aiming to enhance the development of cloud-native applications in containers.
-If you're interested, more on that at [eclipse.org/codewind](https://www.eclipse.org/codewind/).
 
 ### About this website
 

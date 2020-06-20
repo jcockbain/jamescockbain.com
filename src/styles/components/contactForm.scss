@@ -1,41 +1,3 @@
-.form-container {
-  border-radius: $regular-border-radius;
-  background-color: $surface;
-  padding: 20px;
-  border: 2px solid $form-border;
-
-  .response-panel {
-    margin: auto;
-    display: block;
-    text-align: center;
-  }
-
-  button {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    border: 2px solid $form-border;
-    border-radius: $button-border-radius;
-    padding: 12px 20px;
-    color: $on-primary;
-    background-color: $background;
-
-    &:enabled {
-      cursor: pointer;
-
-      &:hover,
-      &:active {
-        background: $hover;
-        opacity: 0.9;
-      }
-    }
-  }
-
-  :disabled {
-    opacity: 0.38;
-  }
-}
-
 .recaptcha-wrapper {
   text-align: center;
   transform: scale(0.8);
@@ -44,36 +6,7 @@
   -webkit-transform-origin: 0 0;
 }
 
-.contact-form {
-  margin-bottom: 0;
-
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    padding: 12px 20px;
-    border: 2px solid $form-border;
-    border-radius: $regular-border-radius;
-    margin: 8px 0;
-  }
-
-  textarea {
-    width: 100%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid $form-border;
-    border-radius: $regular-border-radius;
-    background-color: $text-area-background;
-    margin: 8px 0;
-  }
-}
-
 @include small-breakpoint {
-  .recaptcha-wrapper {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-  }
   .form-container {
     margin-bottom: 20px;
   }

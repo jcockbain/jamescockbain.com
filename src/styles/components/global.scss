@@ -11,85 +11,19 @@ body {
   margin-bottom: 0;
 }
 
-#main-content {
-  margin-top: 50px;
-  h2 {
-    margin: 1rem 0;
-  }
-}
-
-.page-title {
-  padding-bottom: 0.25rem;
-}
-
 .date {
   color: $on-background-secondary;
 }
 
-.card {
-  text-align: left;
-  border: 2px solid $form-border;
-  border-radius: $regular-border-radius;
-  background-color: $surface;
-
-  img {
-    border-radius: calc(0.25rem - 1px);
-  }
-
-  p {
-    margin: 1rem 0;
-  }
-
-  h1,
-  h2 {
-    margin: 0.5rem 0;
-  }
-}
-
-.card-body {
-  padding: 1.25rem;
-}
-
-footer {
-  width: 100%;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 0.5rem;
+.cardImage {
+  border-radius: calc(0.25rem - 1px);
 }
 
 .build-info {
   padding: 0.5rem;
 }
 
-.footer-links {
-  padding: 0.5rem;
-}
-
-@include small-breakpoint {
-  #main-content {
-    margin-top: 70px;
-    padding: 10px 0 0 0;
-    min-height: calc(100vh - 219px);
-  }
-
-  .page-title {
-    padding-bottom: 0.5rem;
-  }
-
-  .card {
-    img {
-      width: 100%;
-    }
-  }
-
-  .footer {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0 0;
-    padding: 0.5rem 0 0 0;
-  }
+blockquote p {
+  font-style: italic;
+  color: $blockquote-color;
 }
