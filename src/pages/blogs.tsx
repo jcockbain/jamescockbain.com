@@ -1,10 +1,10 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Layout } from "../components/layout"
-import { FadeLink } from "../components/link"
-import { SEO } from "../components/seo"
 import Tags from "../components/tags"
+import { Layout } from "../containers/layout"
+import { FadeLink } from "../elements/link"
+import { SEO } from "../elements/seo"
 import { MarkdownRemark } from "../graphql-types"
 
 type Props = PageRendererProps
