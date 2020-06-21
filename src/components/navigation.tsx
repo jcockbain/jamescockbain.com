@@ -3,8 +3,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import Moon from "../assets/svg/moon.svg"
 import Sun from "../assets/svg/sun.svg"
+import { FadeLink } from "../elements/link"
 import { device } from "../styles/device"
-import { FadeLink } from "./link"
 
 import React, { useState } from "react"
 

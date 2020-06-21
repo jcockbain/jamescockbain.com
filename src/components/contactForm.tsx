@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import RecaptchaForm from "../components/recaptcha"
+import RecaptchaForm from "../elements/recaptcha"
 import useContactForm from "../hooks/useContactForm"
 import { ContactFormInputs } from "../types"
 

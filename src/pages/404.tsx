@@ -1,7 +1,7 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React from "react"
-import { Layout } from "../components/layout"
-import { SEO } from "../components/seo"
+import { Layout } from "../containers/layout"
+import { SEO } from "../elements/seo"
 
 type Props = PageRendererProps
 

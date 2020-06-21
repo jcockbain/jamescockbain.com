@@ -2,9 +2,9 @@ import { graphql, PageRendererProps } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
-import { Layout } from "../components/layout"
-import { FadeLink } from "../components/link"
-import { SEO } from "../components/seo"
+import { Layout } from "../containers/layout"
+import { FadeLink } from "../elements/link"
+import { SEO } from "../elements/seo"
 import { Query, SitePageContext } from "../graphql-types"
 
 interface Props extends PageRendererProps {
