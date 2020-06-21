@@ -1,7 +1,34 @@
 import React, { useState } from "react"
+import styled from "styled-components"
 import RecaptchaForm from "../components/recaptcha"
 import useContactForm from "../hooks/useContactForm"
 import { ContactFormInputs } from "../types"
+
+const StyledForm = styled.form`
+  margin-bottom: 0;
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid ${props => props.theme.formBorder};
+    background-color: ${props => props.theme.surface};
+    color: ${props => props.theme.onBackground};
+    border-radius: 4px;
+    margin: 8px 0;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid ${props => props.theme.formBorder};
+    background-color: ${props => props.theme.surface};
+    color: ${props => props.theme.onBackground};
+    border-radius: 4px;
+    margin: 8px 0;
+  }
+`
 
 interface ContactFormProps {
   handleSubmit: (inputs: ContactFormInputs) => void
@@ -20,7 +47,7 @@ const ContactForm = (props: ContactFormProps) => {
 
   return (
     <div>
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <StyledForm onSubmit={handleSubmit}>
         <label>
           Name
           <input
@@ -72,7 +99,7 @@ const ContactForm = (props: ContactFormProps) => {
         <button type="submit" disabled={!recaptchaComplete}>
           Submit
         </button>
-      </form>
+      </StyledForm>
     </div>
   )
 }

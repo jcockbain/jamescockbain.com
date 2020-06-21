@@ -1,10 +1,27 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import styled from "styled-components"
 
 interface Tag {
   tag: string
   totalCount: number
 }
+
+const TagSelector = styled.div`
+  background-color: ${props => props.theme.tag};
+  color: ${props => props.theme.onBackground};
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem 0.8rem 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`
 
 interface Props {
   updateCategories: (categories: string[]) => void
@@ -35,7 +52,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
   return (
     <div className="blog-tags-panel">
       {tags.map((element: Tag) => (
-        <div
+        <TagSelector
           onClick={modifyCategories(element.tag)}
           className={`tag-selector ${
             currentCategories.includes(element.tag) ? "active" : ""
@@ -43,7 +60,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
           key={element.tag}
         >
           {element.tag}
-        </div>
+        </TagSelector>
       ))}
     </div>
   )

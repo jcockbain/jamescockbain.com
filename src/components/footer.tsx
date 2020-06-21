@@ -1,5 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import styled from "styled-components"
+
+const FooterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+`
 
 const Footer = () => {
   const query = graphql`
@@ -25,8 +34,8 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="footer-container">
-        <div className="footer-links">
+      <FooterContainer>
+        <div>
           <a href={github} target="_blank" rel="noopener noreferrer">
             github
           </a>{" "}
@@ -43,7 +52,7 @@ const Footer = () => {
             medium
           </a>
         </div>
-      </div>
+      </FooterContainer>
     </footer>
   )
 }

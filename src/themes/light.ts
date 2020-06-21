@@ -1,0 +1,17 @@
+export default {
+  background: "#fafafa",
+  primary: "#ffffff",
+  secondary: "#03dac6",
+  onBackground: `rgba(0, 0, 0, 0.87)`,
+  onPrimary: `#2d2d2d`,
+  onSecondary: `#000000`,
+  surface: "fafafa",
+  formBorder: "#ccc",
+  navbarColor: "#fafafa",
+  onNavbar: `rgba(0, 0, 0, 0.87)`,
+  calloutBorder: "#0073ba",
+  tag: "#f2f2f2",
+  inlineTag: "lighten(#5183f5, 32%)",
+  onInlineTag: "lighten(rgba(0, 0, 0, 0.87), 10%)",
+  selectedTag: "#8f9bff",
+}
