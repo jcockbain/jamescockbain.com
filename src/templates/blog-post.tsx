@@ -2,9 +2,10 @@ import { graphql, PageRendererProps } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
+import PostNavigator from "../components/postNavigator"
 import { Layout } from "../containers/layout"
-import { FadeLink } from "../elements/link"
 import { SEO } from "../elements/seo"
+import BlogTag from "../elements/tag"
 import { Query, SitePageContext } from "../graphql-types"
 
 interface Props extends PageRendererProps {
@@ -12,26 +13,8 @@ interface Props extends PageRendererProps {
   data: Query
 }
 
-const BlogTag = styled.div`
-  background-color: ${props => props.theme.tag};
-  color: ${props => props.theme.onBackground};
-  border-radius: 4px;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0.3rem 0.5rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-`
-
 const Date = styled.p`
   margin: 0.5rem 0;
-`
-
-const PostNavigator = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
 `
 
 const BlogTags = styled.div`
@@ -91,28 +74,13 @@ const BlogPostTemplate = (props: Props) => {
       </Date>
       <BlogTags>
         {frontmatter!.tags!.map((tag: string) => (
-          <BlogTag key={tag}>{tag}</BlogTag>
+          <BlogTag key={tag} text={tag} />
         ))}
       </BlogTags>
       <Img fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid} />
       <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
       <hr />
-      <PostNavigator className="post-navigator">
-        <li>
-          {previous && (
-            <FadeLink to={previous.fields!.slug!} rel="prev">
-              ← {previous.frontmatter!.title}
-            </FadeLink>
-          )}
-        </li>
-        <li>
-          {next && (
-            <FadeLink to={next.fields!.slug!} rel="next">
-              {next.frontmatter!.title} →
-            </FadeLink>
-          )}
-        </li>
-      </PostNavigator>
+      <PostNavigator next={next} previous={previous} />
     </Layout>
   )
 }

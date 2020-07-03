@@ -5,6 +5,7 @@ import Tags from "../components/tags"
 import { Layout } from "../containers/layout"
 import { FadeLink } from "../elements/link"
 import { SEO } from "../elements/seo"
+import BlogTag from "../elements/tag"
 import { MarkdownRemark } from "../graphql-types"
 
 type Props = PageRendererProps
@@ -29,16 +30,6 @@ const BlogSummary = styled.div`
   .date {
     color: ${props => props.theme.onBackground};
   }
-`
-
-const BlogTag = styled.div`
-  background-color: ${props => props.theme.tag};
-  color: ${props => props.theme.onBackground};
-  border-radius: 4px;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0.3rem 0.5rem;
-  font-size: 0.8rem;
-  font-weight: bold;
 `
 
 const SearchBox = styled.div`
@@ -155,7 +146,7 @@ const BlogIndex = (props: Props) => {
             />
             <BlogTags>
               {frontmatter!.tags!.map((tag: string) => (
-                <BlogTag key={tag}>{tag}</BlogTag>
+                <BlogTag key={tag} text={tag} />
               ))}
             </BlogTags>
           </BlogSummary>

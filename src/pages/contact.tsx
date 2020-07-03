@@ -7,7 +7,6 @@ import LoadingPanel from "../components/contactFormLoadingPanel"
 import FormSubmittedPanel from "../components/contactFormSubmittedPanel"
 import { Layout } from "../containers/layout"
 import { SEO } from "../elements/seo"
-import { device } from "../styles/device"
 import { ContactFormInputs } from "../types"
 
 import axios from "axios"
@@ -17,10 +16,6 @@ const FormContainer = styled.div`
   background-color: ${props => props.theme.surface};
   padding: 20px;
   border: 2px solid ${props => props.theme.formBorder};
-
-  /* @media ${device.laptop} {
-    margin-bottom: 20px;
-  } */
 
   .response-panel {
     margin: auto;
