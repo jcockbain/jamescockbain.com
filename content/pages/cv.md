@@ -3,7 +3,7 @@ title: CV
 template: page
 ---
 
-### Experience
+## Experience
 
 #### Software Developer, IBM
 
@@ -33,27 +33,30 @@ I was part of an agile team of 5 interns to analyse, plan and develop a technica
 - STEM Insight-Program Intern, Teach First
   > March 2017 - April 2017 -->
 
-### Side Projects
+## Side Projects
 
 #### Project Reunite
 
-A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest.
-[https://github.com/project-reunite/reunite](https://github.com/project-reunite/reunite)
+> [https://github.com/project-reunite/reunite](https://github.com/project-reunite/reunite).
 
-### Education
+A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest.
+
+## Education
 
 #### MPhys in Physics, Durham University, First Class Honors
 
 > September 2014 - June 2018
 
-Masters project: UAVs with precise position knowledge - Developing mathematical models in Python to combine data from different sensors onboard a drone, with the aim of locating its position to within 1mm, for use in adaptive optics within astronomy.
+Masters project: *UAVs with precise position knowledge*
+
+Developing mathematical models in Python to combine data from different sensors onboard a drone, with the aim of locating its position to within 1mm, for use in adaptive optics within astronomy.
 
 ### Technical Skills
 
-#### Strong
+#### Languages
 
-JavaScript, Node.js, Python, Docker, Git
+JavaScript, Python, Golang
 
-#### Knowledgeable
+#### Framework / Tools
 
-React, Golang, Kubernetes, HTML/CSS/Bootstrap, Jekyll/Gatsby, Express
+React, Express, Docker, Kubernetes, HTML/CSS/Bootstrap, Jekyll/Gatsby, Git
