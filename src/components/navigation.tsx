@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Moon from "../assets/svg/moon.svg"
 import Sun from "../assets/svg/sun.svg"
 import { FadeLink } from "../elements/link"
-import { device } from "../styles/device"
+import { device } from "../styles/utils/device"
 
 import React, { useState } from "react"
 

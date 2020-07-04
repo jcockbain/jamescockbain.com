@@ -1,6 +1,7 @@
 export default {
-  background: "#fafafa",
+  background: "rgb(19, 18, 23)",
   primary: "#bb86fc",
+  links: "#bb86fc",
   secondary: "#03dac6",
   onBackground: "#ffffff",
   onPrimary: `#000000`,
@@ -14,4 +15,6 @@ export default {
   onInlineTag: "lighten(rgba(0, 0, 0, 0.87), 1%)",
   selectedTag: "#8f9bff",
   calloutBorder: "#bb86fc",
+  headerOpacity: 0.87,
+  textOpacity: 0.6,
 }

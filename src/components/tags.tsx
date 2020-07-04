@@ -23,6 +23,15 @@ const TagSelector = styled.div`
   }
 `
 
+const TagsPanel = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  .active {
+    background-color: ${props => props.theme.selectedTag};
+  }
+`
+
 interface Props {
   updateCategories: (categories: string[]) => void
   currentCategories: string[]
@@ -50,7 +59,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
   const data = useStaticQuery(pageQuery)
   const tags = data.allMarkdownRemark.group
   return (
-    <div className="blog-tags-panel">
+    <TagsPanel>
       {tags.map((element: Tag) => (
         <TagSelector
           onClick={modifyCategories(element.tag)}
@@ -62,7 +71,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
           {element.tag}
         </TagSelector>
       ))}
-    </div>
+    </TagsPanel>
   )
 }
 
