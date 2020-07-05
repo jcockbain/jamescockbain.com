@@ -46,6 +46,7 @@ const LinksContainer = styled.div`
   flex: 1;
   height: 100%;
   margin: 0;
+
   a {
     display: flex;
     align-items: center;

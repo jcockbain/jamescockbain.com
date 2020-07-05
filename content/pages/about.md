@@ -6,7 +6,7 @@ template: page
 ### Me
 
 Hi, I'm James and this is my website.
-I currently work as a software developer within IBM cloud.
+I currently work as a software engineer within IBM cloud.
 
 ### About this website
 

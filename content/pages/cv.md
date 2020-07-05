@@ -5,20 +5,20 @@ template: page
 
 ## Experience
 
-#### Software Developer, IBM
+### Software Engineer, IBM
 
-> September 2018 - present
+*September 2018 - present*
 
-I’m currently a developer with IBM Hybrid Cloud, working on open-source tooling for building cloud-native applications to deploy with Docker and Kubernetes.
+I’m currently a full stack engineer with IBM Hybrid Cloud, working on open-source tooling for building cloud-native applications to deploy with Docker and Kubernetes.
 
 <!-- - Building and supporting the Node.js containers which are deployed into a user's cluster.
 - Developing React UI components to visualise micro-service performance.
 - Implementing a Golang CLI as an interface to the product.
 - Using Test Driven Development with Mocha, Jest and Go testing libraries to deliver features across the products. -->
 
-#### Extreme Blue Technical Intern, IBM
+### Extreme Blue Technical Intern, IBM
 
-> June 2017 - September 2017
+*June 2017 - September 2017*
 
 I was part of an agile team of 5 interns to analyse, plan and develop a technical solution for Somerset and Avon police.
 
@@ -35,28 +35,26 @@ I was part of an agile team of 5 interns to analyse, plan and develop a technica
 
 ## Side Projects
 
-#### Project Reunite
-
-> [https://github.com/project-reunite/reunite](https://github.com/project-reunite/reunite).
+### Project Reunite
 
 A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest.
+[https://github.com/project-reunite/reunite](https://github.com/project-reunite/reunite).
 
 ## Education
 
-#### MPhys in Physics, Durham University, First Class Honors
+### MPhys in Physics, Durham University, First Class Honors
 
-> September 2014 - June 2018
+*September 2014 - June 2018*
 
-Masters project: *UAVs with precise position knowledge*
-
+Masters project: *UAVs with precise position knowledge*.
 Developing mathematical models in Python to combine data from different sensors onboard a drone, with the aim of locating its position to within 1mm, for use in adaptive optics within astronomy.
 
-### Technical Skills
+## Technical Skills
 
-#### Languages
+### Languages
 
 JavaScript, Python, Golang
 
-#### Framework / Tools
+### Frameworks / Tools
 
 React, Express, Docker, Kubernetes, HTML/CSS/Bootstrap, Jekyll/Gatsby, Git
