@@ -3,12 +3,12 @@ title: About
 template: page
 ---
 
-### Me
+## Me
 
 Hi, I'm James and this is my website.
 I currently work as a software engineer within IBM cloud.
 
-### About this website
+## About this website
 
 The site itself is written in Gatsby with Typescript, the code is at [github.com/jcockbain/jamescockbain.com](https://github.com/jcockbain/jamescockbain.com).
 I've also written a short post on setting it up at [/blog/building-a-blog-site-with-gatsby](https://www.jamescockbain.com/blog/building-a-blog-site-with-gatsby/).
