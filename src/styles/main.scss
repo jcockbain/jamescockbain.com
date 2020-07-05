@@ -1,12 +1,5 @@
-@import "/base/variables";
-@import "/base/mixins";
-
 @import "/components/navigation";
 @import "/components/global";
 @import "/components/contactForm";
 @import "/components/blogIndex";
 @import "/components/blog";
-
-// themes
-
-@import "./themes/dark.scss"

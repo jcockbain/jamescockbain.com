@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
 import { ThemeContext } from "../context/themeProvider"
-import { device } from "../styles/device"
+import { device } from "../styles/utils/device"
 
 import ReCAPTCHA from "react-google-recaptcha"
 

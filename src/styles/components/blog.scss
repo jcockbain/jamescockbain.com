@@ -5,7 +5,7 @@
 }
 
 .gatsby-highlight {
-  background-color: $code-block-color;
+  background-color: #2d2d2d;
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 1em;
@@ -13,7 +13,7 @@
 }
 
 :not(pre) > code[class*="language-"] {
-  background: $inline-code-color !important;
+  background: #f5f2f0 !important;
   color: black;
   font-weight: bold;
 }

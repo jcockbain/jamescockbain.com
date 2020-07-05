@@ -1,18 +1,11 @@
 .blog-summary {
-  p, h3, a {
+  p,
+  h3,
+  a {
     text-decoration: none;
   }
 }
 
 .blog-tags {
   display: flex;
-}
-
-.blog-tags-panel {
-  display: flex;
-  flex-wrap: wrap;
-
-  .active {
-    background-color: $selected-tag;
-  }
 }

@@ -28,6 +28,10 @@ const StyledForm = styled.form`
     border-radius: 4px;
     margin: 8px 0;
   }
+
+  label {
+    color: ${props => props.theme.onBackground};
+  }
 `
 
 interface ContactFormProps {

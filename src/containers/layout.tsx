@@ -1,16 +1,15 @@
 import { PageRendererProps } from "gatsby"
 import React, { ReactNode, useContext } from "react"
-import Helmet from "react-helmet"
-import { ThemeProvider } from "styled-components"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import Footer from "../components/footer"
 import Navigation from "../components/navigation"
+import GlobalStyles from "../styles/utils/globalStyles"
 
 import darkTheme from "../themes/dark"
 import lightTheme from "../themes/light"
 
 import { ThemeContext } from "../context/themeProvider"
-import { device } from "../styles/device"
+import { device } from "../styles/utils/device"
 import { rhythm } from "../utils/typography"
 
 interface Props extends PageRendererProps {
@@ -38,15 +37,10 @@ export const Layout = (props: Props) => {
   const { children, title, titleEmoji } = props
   const { isDark, toggleTheme } = useContext(ThemeContext)
 
-  const themeClass = isDark ? "content darkTheme" : "content lightTheme"
   return (
     <>
-      <Helmet
-        bodyAttributes={{
-          class: `theme ${themeClass}`,
-        }}
-      />
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <GlobalStyles />
         <Content>
           <Navigation changeTheme={toggleTheme} isDark={isDark} />
           <main>

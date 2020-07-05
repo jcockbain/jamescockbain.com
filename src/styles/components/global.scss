@@ -1,18 +1,6 @@
-.lightTheme {
-  background: $background;
-}
-
-body {
-  font-size: 1rem;
-}
-
 .content {
   height: 100%;
   margin-bottom: 0;
-}
-
-.date {
-  color: $on-background-secondary;
 }
 
 .cardImage {
@@ -25,5 +13,4 @@ body {
 
 blockquote p {
   font-style: italic;
-  color: $blockquote-color;
 }
