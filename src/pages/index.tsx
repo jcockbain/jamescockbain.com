@@ -43,8 +43,8 @@ const HomePage = (props: PageRendererProps) => {
           alt="A picture of me!"
         />
         <CardP>
-          You can read more about me{" "}
-          <FadeLink to="/pages/about-me">here</FadeLink>.
+          You can read more about me <FadeLink to="/pages/about">here</FadeLink>
+          .
         </CardP>
       </Card>
     </Layout>
