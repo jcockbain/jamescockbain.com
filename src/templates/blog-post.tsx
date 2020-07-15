@@ -4,6 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import PostNavigator from "../components/postNavigator"
 import { Layout } from "../containers/layout"
+import Card from "../elements/card"
 import { SEO } from "../elements/seo"
 import BlogTag from "../elements/tag"
 import { Query, SitePageContext } from "../graphql-types"
@@ -68,18 +69,19 @@ const BlogPostTemplate = (props: Props) => {
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <Date>
-        {`${frontmatter.date} `} &bull;
-        {` ${timeToRead} min read`}
-      </Date>
-      <BlogTags>
-        {frontmatter!.tags!.map((tag: string) => (
-          <BlogTag key={tag} text={tag} />
-        ))}
-      </BlogTags>
-      <Img fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid} />
-      <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
-      <hr />
+      <Card>
+        <Date>
+          {`${frontmatter.date} `} &bull;
+          {` ${timeToRead} min read`}
+        </Date>
+        <BlogTags>
+          {frontmatter!.tags!.map((tag: string) => (
+            <BlogTag key={tag} text={tag} />
+          ))}
+        </BlogTags>
+        <Img fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid} />
+        <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
+      </Card>
       <PostNavigator next={next} previous={previous} />
     </Layout>
   )
