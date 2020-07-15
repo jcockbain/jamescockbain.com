@@ -3,16 +3,9 @@ import Img from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
 import { Layout } from "../containers/layout"
+import Card from "../elements/card"
 import { FadeLink } from "../elements/link"
 import { SEO } from "../elements/seo"
-
-const Card = styled.div`
-  text-align: left;
-  border: 2px solid ${props => props.theme.formBorder};
-  border-radius: 4px;
-  background-color: ${props => props.theme.surface};
-  padding: 1.25rem;
-`
 
 const CardP = styled.p`
   margin: 1rem 0;
