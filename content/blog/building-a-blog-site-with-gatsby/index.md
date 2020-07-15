@@ -58,8 +58,6 @@ As a common problem though (to do with the strictness of the Recaptcha element d
 
 > "As a user, I can see the tags for each post and search for posts based on tag combinations"
 
-This one may take a while to pay off, with more posts needed!
-
 I began by adding a simple tag array to the header of each markdown post file.
 GraphQL then makes handling these tags straightforward.
 A query, made by the blog index page (`/blog`), collects all tags into an array.

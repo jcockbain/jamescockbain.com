@@ -13,6 +13,7 @@ const PostNavigator = styled.ul`
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin-top: 1rem;
 `
 
 const Navigator = ({ next, previous }: Props) => {

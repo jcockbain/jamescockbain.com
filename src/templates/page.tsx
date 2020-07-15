@@ -1,6 +1,7 @@
 import { graphql, PageRendererProps } from "gatsby"
 import React from "react"
 import { Layout } from "../containers/layout"
+import Card from "../elements/card"
 import { SEO } from "../elements/seo"
 import { Query, SitePageContext } from "../graphql-types"
 
@@ -22,7 +23,9 @@ const PageTemplate = (props: Props) => {
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Card>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Card>
     </Layout>
   )
 }

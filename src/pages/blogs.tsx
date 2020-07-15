@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Tags from "../components/tags"
 import { Layout } from "../containers/layout"
+import Card from "../elements/Card"
 import { FadeLink } from "../elements/link"
 import { SEO } from "../elements/seo"
 import BlogTag from "../elements/tag"
@@ -11,11 +12,6 @@ import { MarkdownRemark } from "../graphql-types"
 type Props = PageRendererProps
 
 const BlogSummary = styled.div`
-  padding: 1.25rem;
-  background-color: ${props => props.theme.surface};
-  border-radius: 4px;
-  border: 2px solid ${props => props.theme.formBorder};
-
   p {
     color: ${props => props.theme.onBackground};
     font-weight: 400;
@@ -131,25 +127,27 @@ const BlogIndex = (props: Props) => {
 
         const title = frontmatter.title || fields.slug
         return (
-          <BlogSummary key={slug} className="blog-summary">
-            <FadeLink to={slug}>
-              <h3>{title}</h3>
-            </FadeLink>
-            <small className="date">
-              {`${frontmatter.date} `} &bull;
-              {` ${node.timeToRead} min read`}
-            </small>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: frontmatter.description || excerpt,
-              }}
-            />
-            <BlogTags>
-              {frontmatter!.tags!.map((tag: string) => (
-                <BlogTag key={tag} text={tag} />
-              ))}
-            </BlogTags>
-          </BlogSummary>
+          <Card key={slug}>
+            <BlogSummary key={slug} className="blog-summary">
+              <FadeLink to={slug}>
+                <h3>{title}</h3>
+              </FadeLink>
+              <small className="date">
+                {`${frontmatter.date} `} &bull;
+                {` ${node.timeToRead} min read`}
+              </small>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: frontmatter.description || excerpt,
+                }}
+              />
+              <BlogTags>
+                {frontmatter!.tags!.map((tag: string) => (
+                  <BlogTag key={tag} text={tag} />
+                ))}
+              </BlogTags>
+            </BlogSummary>
+          </Card>
         )
       })}
     </Layout>
