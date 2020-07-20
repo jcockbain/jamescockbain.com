@@ -12,12 +12,16 @@ module.exports = {
     },
     menuLinks: [
       {
+        link: "/pages/about",
+        name: "About",
+      },
+      {
         link: "/blogs",
         name: "Blog",
       },
       {
-        link: "/pages/about",
-        name: "About",
+        link: "/projects",
+        name: "Projects",
       },
       {
         link: "/pages/cv",

@@ -42,6 +42,7 @@
     "react-dom": "^16.8.6",
     "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.0",
+    "react-icons": "^3.10.0",
     "react-responsive": "^8.0.3",
     "react-spinners": "^0.8.0",
     "react-typography": "^0.16.19",
@@ -53,7 +54,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.13.1",
+    "@graphql-codegen/cli": "^1.17.0",
     "@graphql-codegen/typescript": "1.1.1",
     "@graphql-codegen/typescript-operations": "1.1.1",
     "@graphql-codegen/typescript-react-apollo": "1.1.1",

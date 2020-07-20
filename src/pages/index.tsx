@@ -29,7 +29,9 @@ const HomePage = (props: PageRendererProps) => {
       <SEO title="home" />
       <Card>
         <h2>Hi, I'm James &#x1f44b; </h2>
-        <CardP>I'm a software engineer, working for IBM.</CardP>
+        <CardP>
+          I'm a software engineer, currently working within IBM cloud.
+        </CardP>
         <Img
           className="cardImage"
           fluid={data.file.childImageSharp.fluid}
