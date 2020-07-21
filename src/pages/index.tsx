@@ -26,18 +26,19 @@ const HomePage = (props: PageRendererProps) => {
 
   return (
     <Layout location={props.location} title="Home">
-      <SEO title="home" />
+      <SEO title="Home" />
       <Card>
         <h2>Hi, I'm James &#x1f44b; </h2>
-        <CardP>I'm a software engineer, working for IBM.</CardP>
+        <CardP>
+          I'm a software engineer, currently working within IBM cloud.
+        </CardP>
         <Img
           className="cardImage"
           fluid={data.file.childImageSharp.fluid}
           alt="A picture of me!"
         />
         <CardP>
-          You can read more about me <FadeLink to="/pages/about">here</FadeLink>
-          .
+          You can read more about me <FadeLink to="/pages/cv">here</FadeLink>.
         </CardP>
       </Card>
     </Layout>

@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "styled-components"
+import TagLabel from "../elements/tagLabel"
 
 interface Tag {
   tag: string
@@ -68,7 +69,7 @@ const Tags = ({ updateCategories, currentCategories }: Props) => {
           }`}
           key={element.tag}
         >
-          {element.tag}
+          <TagLabel text={element.tag} />
         </TagSelector>
       ))}
     </TagsPanel>

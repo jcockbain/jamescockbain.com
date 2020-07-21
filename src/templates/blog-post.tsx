@@ -5,6 +5,7 @@ import styled from "styled-components"
 import PostNavigator from "../components/postNavigator"
 import { Layout } from "../containers/layout"
 import Card from "../elements/card"
+import Flex from "../elements/flex"
 import { SEO } from "../elements/seo"
 import BlogTag from "../elements/tag"
 import { Query, SitePageContext } from "../graphql-types"
@@ -15,11 +16,6 @@ interface Props extends PageRendererProps {
 }
 
 const Date = styled.p`
-  margin: 0.5rem 0;
-`
-
-const BlogTags = styled.div`
-  display: flex;
   margin: 0.5rem 0;
 `
 
@@ -74,11 +70,11 @@ const BlogPostTemplate = (props: Props) => {
           {`${frontmatter.date} `} &bull;
           {` ${timeToRead} min read`}
         </Date>
-        <BlogTags>
+        <Flex>
           {frontmatter!.tags!.map((tag: string) => (
             <BlogTag key={tag} text={tag} />
           ))}
-        </BlogTags>
+        </Flex>
         <Img fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid} />
         <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
       </Card>

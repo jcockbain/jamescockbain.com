@@ -46,7 +46,7 @@ A submission which placed 1st in the IBM UK Call for Code competition and was th
 
 *September 2014 - June 2018*
 
-Masters project: *UAVs with precise position knowledge*.
+Master's project: *UAVs with precise position knowledge*.
 Developing mathematical models in Python to combine data from different sensors onboard a drone, with the aim of locating its position to within 1mm, for use in adaptive optics within astronomy.
 
 ## Technical Skills
@@ -57,4 +57,8 @@ JavaScript, Python, Golang
 
 ### Frameworks / Tools
 
-React, Express, Docker, Kubernetes, HTML/CSS/Bootstrap, Jekyll/Gatsby, Git
+React, Express, HTML/CSS, Jekyll/Gatsby/Next.js, Bootstrap/Tailwindcss
+
+### Devops / SCM
+
+Docker, Kubernetes, Git
