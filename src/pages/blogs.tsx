@@ -1,7 +1,7 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
-import Tags from "../components/tags"
+import Tags from "../components/blogTagsSelector"
 import { Layout } from "../containers/layout"
 import Card from "../elements/card"
 import { FadeLink } from "../elements/link"

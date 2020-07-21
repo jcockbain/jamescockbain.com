@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import TagLabel from "./tagLabel"
 
 const Tag = styled.div`
   background-color: ${props => props.theme.tag};
@@ -15,6 +16,10 @@ interface Props {
   text: string
 }
 
-const BlogTag = (props: Props) => <Tag>{props.text}</Tag>
+const BlogTag = ({ text }: Props) => (
+  <Tag>
+    <TagLabel text={text} />
+  </Tag>
+)
 
 export default BlogTag
