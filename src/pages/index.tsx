@@ -26,7 +26,7 @@ const HomePage = (props: PageRendererProps) => {
 
   return (
     <Layout location={props.location} title="Home">
-      <SEO title="home" />
+      <SEO title="Home" />
       <Card>
         <h2>Hi, I'm James &#x1f44b; </h2>
         <CardP>
@@ -38,8 +38,7 @@ const HomePage = (props: PageRendererProps) => {
           alt="A picture of me!"
         />
         <CardP>
-          You can read more about me <FadeLink to="/pages/about">here</FadeLink>
-          .
+          You can read more about me <FadeLink to="/pages/cv">here</FadeLink>.
         </CardP>
       </Card>
     </Layout>

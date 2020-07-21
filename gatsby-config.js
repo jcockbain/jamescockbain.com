@@ -11,17 +11,17 @@ module.exports = {
       medium: `@jcockbain96`,
     },
     menuLinks: [
+      // {
+      //   link: "/pages/about",
+      //   name: "About",
+      // },
       {
-        link: "/pages/about",
-        name: "About",
+        link: "/projects",
+        name: "Projects",
       },
       {
         link: "/blogs",
         name: "Blog",
-      },
-      {
-        link: "/projects",
-        name: "Projects",
       },
       {
         link: "/pages/cv",
