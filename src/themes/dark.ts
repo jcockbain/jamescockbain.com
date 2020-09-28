@@ -10,7 +10,7 @@ export default {
   formBorder: "black",
   navbarColor: "#1b191f",
   onNavbar: `white`,
-  tag: "#bb86fc",
+  tag: "#616161",
   inlineTag: "#bb86fc",
   onInlineTag: "lighten(rgba(0, 0, 0, 0.87), 1%)",
   selectedTag: "#8f9bff",
