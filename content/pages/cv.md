@@ -5,11 +5,22 @@ template: page
 
 ## Experience
 
-### Software Engineer, IBM
+### Backend Software Engineer, Thought Machine
 
-*September 2018 - present*
+*October 2020 -*
 
-I’m currently a full stack engineer with IBM Hybrid Cloud, working on open-source tooling for building cloud-native applications to deploy with Docker and Kubernetes.
+From the 12th October I will be joining Thought Machine as a backend engineer, working on their cloud-native core banking platform.
+
+<!-- - Building and supporting the Node.js containers which are deployed into a user's cluster.
+- Developing React UI components to visualise micro-service performance.
+- Implementing a Golang CLI as an interface to the product.
+- Using Test Driven Development with Mocha, Jest and Go testing libraries to deliver features across the products. -->
+
+### Software Developer, IBM
+
+*September 2018 - October 2020*
+
+Full stack developer with IBM Hybrid Cloud, working on open-source tooling for building cloud-native applications to deploy with Docker and Kubernetes.
 
 <!-- - Building and supporting the Node.js containers which are deployed into a user's cluster.
 - Developing React UI components to visualise micro-service performance.
