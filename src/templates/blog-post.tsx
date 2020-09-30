@@ -75,7 +75,11 @@ const BlogPostTemplate = (props: Props) => {
             <BlogTag key={tag} text={tag} />
           ))}
         </Flex>
-        <Img fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid} />
+        {post.frontmatter!.featuredImage && (
+          <Img
+            fluid={post.frontmatter!.featuredImage!.childImageSharp!.fluid}
+          />
+        )}
         <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
       </Card>
       <PostNavigator next={next} previous={previous} />
