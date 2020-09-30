@@ -30,9 +30,9 @@ const HomePage = (props: PageRendererProps) => {
       <Card>
         <h2>Hi, I'm James &#x1f44b; </h2>
         <CardP>
-          I'm a software engineer, currently working within IBM cloud. Soon,
-          I'll be joining Thought Machine to work on their cloud-native core
-          banking platform.
+          I'm software engineer, currently working within IBM cloud. Soon, I'll
+          be joining <a href="https://thoughtmachine.net/">Thought Machine</a>{" "}
+          to work on their cloud-native core banking platform.
         </CardP>
         <Img
           className="cardImage"
