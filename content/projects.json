@@ -11,7 +11,7 @@
       "name": "jamescockbain.com",
       "summary": "This website! Starting from a basic Gatsby Typescript starter, with custom styled-components styles. Deployed with Netlify.",
       "technologies": ["Gatsby", "Typescript", "Styled-Components", "Netlify"],
-      "codeLink": "https://github.com/project-reunite/reunite",
+      "codeLink": "https://github.com/jcockbain/jamescockbain.com",
       "deploymentLink": "https://jamescockbain.com"
     },
     {
