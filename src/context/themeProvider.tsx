@@ -10,11 +10,12 @@ interface Props {
 }
 
 const ThemeProvider = ({ children }: Props) => {
-  const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark")
+  // const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark")
+  const [isDark, setIsDark] = useState(false)
 
   const toggleTheme = () => {
     const newTheme = isDark ? "light" : "dark"
-    localStorage.setItem("theme", newTheme)
+    // localStorage.setItem("theme", newTheme)
     setIsDark(!isDark)
   }
 
