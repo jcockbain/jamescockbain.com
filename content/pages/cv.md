@@ -44,13 +44,6 @@ I was part of an agile team of 5 interns to analyse, plan and develop a technica
 - STEM Insight-Program Intern, Teach First
   > March 2017 - April 2017 -->
 
-## Side Projects
-
-### Project Reunite
-
-A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest.
-[https://github.com/project-reunite/reunite](https://github.com/project-reunite/reunite).
-
 ## Education
 
 ### MPhys in Physics, Durham University, First Class Honors
