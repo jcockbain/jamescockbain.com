@@ -19,7 +19,7 @@ interface Props extends PageRendererProps {
 }
 
 const Content = styled.div`
-  margin-top: 50px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(36)};

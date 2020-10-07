@@ -129,7 +129,8 @@ const Navigation = ({ changeTheme, isDark }: Props) => {
       <NavContainer>
         <LinksContainer className="justify-start">
           <FadeLink className="nav-link" to="/">
-            &#x1f3e0; Home
+            {/* &#x1f3e0; Home */}
+            Home
           </FadeLink>
         </LinksContainer>
         {links}
