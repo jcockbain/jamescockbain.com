@@ -15,6 +15,13 @@
       "deploymentLink": "https://jamescockbain.com"
     },
     {
+      "name": "Advent Of Code",
+      "summary": "Solutions for the Christmas-themed Advent of Code challenges (adventofcode.com), written in Python.",
+      "technologies": ["Python", "Go", "Algorithms"],
+      "codeLink": "https://github.com/jcockbain/advent-of-code-2020",
+      "deploymentLink": ""
+    },
+    {
       "name": "Cracking the Coding Interview Solutions",
       "summary": "Python solutions to problems in Cracking The Coding Interview. All algorithms questions completed, with 100% test coverage.",
       "technologies": [
@@ -24,13 +31,6 @@
         "Object Orientation"
       ],
       "codeLink": "https://github.com/jcockbain/ctci-solutions",
-      "deploymentLink": ""
-    },
-    {
-      "name": "Advent Of Code",
-      "summary": "Solutions for the Christmas-themed Advent of Code challenges (adventofcode.com), written in Python.",
-      "technologies": ["Python", "Algorithms"],
-      "codeLink": "https://github.com/jcockbain/advent-of-code",
       "deploymentLink": ""
     },
     {

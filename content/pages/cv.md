@@ -9,7 +9,7 @@ template: page
 
 *October 2020 -*
 
-From the 12th October I will be joining Thought Machine as a backend engineer, working on their cloud-native core banking platform.
+On the Client Tools team. Supporting tools for deploying Vault, a cloud-native core banking platform, on internal and client-owned Kubernetes clusters.
 
 <!-- - Building and supporting the Node.js containers which are deployed into a user's cluster.
 - Developing React UI components to visualise micro-service performance.
