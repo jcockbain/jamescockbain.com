@@ -4,7 +4,9 @@
 }
 
 .cardImage {
-  border-radius: calc(0.25rem - 1px);
+  border-radius: 50%;
+  max-width: 250px;
+  margin: auto;
 }
 
 .build-info {

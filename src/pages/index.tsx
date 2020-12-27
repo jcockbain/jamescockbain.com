@@ -30,9 +30,8 @@ const HomePage = (props: PageRendererProps) => {
       <Card>
         <h2>Hi, I'm James &#x1f44b; </h2>
         <CardP>
-          I'm software engineer, currently working within IBM cloud. Soon, I'll
-          be joining <a href="https://thoughtmachine.net/">Thought Machine</a>{" "}
-          to work on their cloud-native core banking platform.
+          I'm a software engineer, working for <a href="https://thoughtmachine.net/">Thought Machine</a>{" "}
+          on their cloud-native core banking platform.
         </CardP>
         <Img
           className="cardImage"
@@ -40,7 +39,7 @@ const HomePage = (props: PageRendererProps) => {
           alt="A picture of me!"
         />
         <CardP>
-          I have a degree in physics and enjoy building things with JavaScript,
+         I have a degree in physics and enjoy building things with JavaScript,
           Python and Go. You can read more about me{" "}
           <FadeLink to="/pages/cv">here</FadeLink>.
         </CardP>
