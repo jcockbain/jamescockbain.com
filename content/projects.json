@@ -1,23 +1,13 @@
 {
   "content": [
     {
-      "name": "Project Reunite",
-      "summary": "A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest. It's a mobile-friendly web app for reuniting loved ones after a natural disaster, using facial feature recognition.",
-      "technologies": ["React", "Mineral-UI", "Express", "Socket.io"],
-      "codeLink": "https://github.com/project-reunite/reunite",
-      "deploymentLink": "http://project-reunite.eu-gb.cf.appdomain.cloud/#/"
-    },
-    {
-      "name": "jamescockbain.com",
-      "summary": "This website! Starting from a basic Gatsby Typescript starter, with custom styled-components styles. Deployed with Netlify.",
-      "technologies": ["Gatsby", "Typescript", "Styled-Components", "Netlify"],
-      "codeLink": "https://github.com/jcockbain/jamescockbain.com",
-      "deploymentLink": "https://jamescockbain.com"
-    },
-    {
-      "name": "Advent Of Code",
-      "summary": "Solutions for the Christmas-themed Advent of Code challenges (adventofcode.com), written in Python.",
-      "technologies": ["Python", "Go", "Algorithms"],
+      "name": "2020 Advent Of Code",
+      "summary": "Solutions for the 2020 edition of the Advent of Code challenges (adventofcode.com), written in Python and Go.",
+      "technologies": [
+        "Python",
+        "Go",
+        "Algorithms"
+      ],
       "codeLink": "https://github.com/jcockbain/advent-of-code-2020",
       "deploymentLink": ""
     },
@@ -34,9 +24,40 @@
       "deploymentLink": ""
     },
     {
+      "name": "jamescockbain.com",
+      "summary": "This website! Starting from a basic Gatsby Typescript starter, with custom styled-components styles. Deployed with Netlify.",
+      "technologies": [
+        "Typescript",
+        "Gatsby",
+        "Styled-Components",
+        "Netlify"
+      ],
+      "codeLink": "https://github.com/jcockbain/jamescockbain.com",
+      "deploymentLink": "https://jamescockbain.com"
+    },
+    {
+      "name": "Project Reunite",
+      "summary": "A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest. It's a mobile-friendly web app for reuniting loved ones after a natural disaster, using facial feature recognition.",
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Mineral-UI",
+        "Express",
+        "Socket.io"
+      ],
+      "codeLink": "https://github.com/project-reunite/reunite",
+      "deploymentLink": ""
+    },
+    {
       "name": "MERN TODO App",
       "summary": "A MongoDB based app I use to track daily tasks. The Next.js client offers pages for; CRUD operations on todays tasks, for managing all tasks through a calendar, and a graphical summary of tasks completed.",
-      "technologies": ["MongoDB", "Express", "React", "Node.js", "Next.js"],
+      "technologies": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Next.js"
+      ],
       "codeLink": "https://github.com/MERN-todo?type=source",
       "deploymentLink": ""
     }
