@@ -1,12 +1,13 @@
 {
   "content": [
     {
-      "name": "2020 Advent Of Code",
-      "summary": "Solutions for the 2020 edition of the Advent of Code challenges (adventofcode.com), written in Python and Go.",
+      "name": "Advent Of Code",
+      "summary": "Solutions for Advent of Code challenges, written in Python and Go. I've completed  years '19 and '20 and now going back in time to '15 - '18 to practice Golang and algorithms. I find them the problems interesting and they make me think of Christmas 🎅, which is nice.",
       "technologies": [
         "Python",
         "Go",
-        "Algorithms"
+        "Algorithms",
+        "Christmas!"
       ],
       "codeLink": "https://github.com/jcockbain/advent-of-code-2020",
       "deploymentLink": ""
@@ -24,20 +25,8 @@
       "deploymentLink": ""
     },
     {
-      "name": "jamescockbain.com",
-      "summary": "This website! Starting from a basic Gatsby Typescript starter, with custom styled-components styles. Deployed with Netlify.",
-      "technologies": [
-        "Typescript",
-        "Gatsby",
-        "Styled-Components",
-        "Netlify"
-      ],
-      "codeLink": "https://github.com/jcockbain/jamescockbain.com",
-      "deploymentLink": "https://jamescockbain.com"
-    },
-    {
       "name": "Project Reunite",
-      "summary": "A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects in the global contest. It's a mobile-friendly web app for reuniting loved ones after a natural disaster, using facial feature recognition.",
+      "summary": "A submission which placed 1st in the IBM UK Call for Code competition and was then selected in the final 5, out of 132 projects, in the global contest. It's a mobile-friendly web app for reuniting loved ones after a natural disaster, using facial feature recognition.",
       "technologies": [
         "JavaScript",
         "React",
@@ -49,16 +38,15 @@
       "deploymentLink": ""
     },
     {
-      "name": "MERN TODO App",
-      "summary": "A MongoDB based app I use to track daily tasks. The Next.js client offers pages for; CRUD operations on todays tasks, for managing all tasks through a calendar, and a graphical summary of tasks completed.",
+      "name": "jamescockbain.com",
+      "summary": "This website! Starting from a basic Gatsby Typescript starter, with custom styled-components styles and a sprinkling of emojis 🚀. Deployed with Netlify.",
       "technologies": [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Next.js"
+        "Typescript",
+        "Gatsby",
+        "Styled-Components",
+        "Netlify"
       ],
-      "codeLink": "https://github.com/MERN-todo?type=source",
+      "codeLink": "https://github.com/jcockbain/jamescockbain.com",
       "deploymentLink": ""
     }
   ]
