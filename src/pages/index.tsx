@@ -39,9 +39,8 @@ const HomePage = (props: PageRendererProps) => {
           alt="A picture of me!"
         />
         <CardP>
-         I have a degree in physics and enjoy building things with JavaScript,
-          Python and Go. You can read more about me{" "}
-          <FadeLink to="/pages/cv">here</FadeLink>.
+          I have a degree in physics and now enjoy building things with Go, Python and JavaScript. You can read more about me{" "}
+          <FadeLink to="/pages/cv">here</FadeLink> &#128516;.
         </CardP>
       </Card>
     </Layout>
