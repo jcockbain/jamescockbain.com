@@ -60,7 +60,7 @@ Developing mathematical models in Python to combine data from different sensors 
 
 Golang, Python, Javascript
 
-### Frameworks / Tools
+### Frameworks
 
 React, Express, HTML/CSS, Jekyll/Gatsby/Next.js, Bootstrap/Tailwindcss
 
