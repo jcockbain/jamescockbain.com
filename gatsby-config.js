@@ -9,6 +9,7 @@ module.exports = {
       github: `jcockbain`,
       linkedin: `james-cockbain-0a3615102`,
       medium: `@jcockbain96`,
+      stackoverflow: `11272609`,
     },
     menuLinks: [
       // {
