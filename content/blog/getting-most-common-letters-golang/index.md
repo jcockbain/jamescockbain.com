@@ -120,8 +120,8 @@ More information about sorting in Go can be found here https://gobyexample.com/s
 I've found this data structure very useful when solving algorithm challenges in the past.
 I also like the nice clean example of types, structs and interfaces in Go. 
 
-All code used in the post is here https://gist.github.com/jcockbain/e76b65fc13e4f19faf9d2ae318c7f5a6.
-My solution to the original problem that inspired it can be found at https://github.com/jcockbain/advent-of-code-2016/blob/main/day05/main.go.
+All code used in the post is [here](https://gist.github.com/jcockbain/e76b65fc13e4f19faf9d2ae318c7f5a6).
+My solution to the original problem that inspired it can be found [here](https://github.com/jcockbain/advent-of-code-2016/blob/main/day05/main.go).
 
 
 Thanks for checking out this quick post! 👊
