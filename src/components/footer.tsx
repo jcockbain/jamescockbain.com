@@ -21,6 +21,7 @@ const Footer = () => {
             linkedin
             twitter
             medium
+            stackoverflow
           }
         }
       }
@@ -32,6 +33,7 @@ const Footer = () => {
   const github = `https://www.github.com/${data.site.siteMetadata.social.github}`
   const linkedin = `https://www.linkedin.com/in/${data.site.siteMetadata.social.linkedin}`
   const medium = `https://medium.com/${data.site.siteMetadata.social.medium}`
+  const stackoverflow = `https://stackoverflow.com/users/${data.site.siteMetadata.social.stackoverflow}`
 
   return (
     <footer>
@@ -51,6 +53,10 @@ const Footer = () => {
           &bull;{" "}
           <a href={medium} target="_blank" rel="noopener noreferrer">
             medium
+          </a>
+          &bull;{" "}
+          <a href={stackoverflow} target="_blank" rel="noopener noreferrer">
+            stack overflow
           </a>
         </div>
       </FooterContainer>
