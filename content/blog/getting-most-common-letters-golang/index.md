@@ -12,7 +12,7 @@ The problem in particular was https://adventofcode.com/2016/day/5 (a particularl
 
 The main part of the problem is ordering the characters in a sentence, first by letter frequency and then alphabetically in the case of a tie. An intuitive way to solve this is with a character counter (like `collections.Counter` in Python).
 
-Here two options I'd consider if I was using python for this.
+Here are two options I'd consider if using python for this.
 
 <div class="filename">counter.py</div>
 
@@ -25,12 +25,14 @@ counter = collections.Counter(sentence)
 counter = {}
 for c in sentence:
     if c.isalpha():
-        if c not counter:
+        if c not in counter:
             counter[c] = 0
         counter[c] += 1
 
 # sort by most common letters, and then alphabetically
 ordering = sorted(counter.items(), key=lambda item: (-item[1], item[0]))
+print(ordering)
+# [('l', 3), ('o', 2), ('H', 1), ('d', 1), ('e', 1), ('r', 1), ('w', 1)]
 ```
 
 > We could also alternatively a `collections.defaultdict(int)` to remove the `if c not in counter` check in the second one. 
@@ -52,7 +54,7 @@ for _, c := range s {
 }
 ```
 
-The bit that's somewhat more involved is sorting them (with what is a custom sorting function).
+The bit that's somewhat more involved is sorting them (with a custom sorting function).
 
 For this, I use the Go `sort` package (https://golang.org/pkg/sort/) and a list of letter structs.
 
@@ -66,7 +68,7 @@ type letter struct {
 type letters []letter
 ```
 
-We can use `sort.Interface`, which dictates what can be passed into the package's generic sorting function
+We can use `sort.Interface`, which dictates what can be passed into the package's generic sorting function.
 Sort.Interface has 3 methods; Len, Swap and Less. 
 For this simple example, Len and Swap are trivial.
 
@@ -93,20 +95,33 @@ func (l letters) Less(i, j int) bool {
 }
 ```
 
-Bringing this together is then as simple as this. We have to loop over our initial counter to create the letters slice, but then `sort.Sort` function will handle the heavy lifting.
+Bringing this together is then simple. We have to loop over our initial counter to create the letters slice, but then `sort.Sort` function will handle the heavy lifting.
 
+I've also added a function to print out the slice nicely too.
 
 ```go
+func (l letters) Print() {
+	for _, letter := range l {
+		fmt.Printf("%s : %d ", string(letter.char), letter.count)
+	}
+}
+
 lettersSlice := letters{}
 for char, freq := range counter {
     lettersSlice = append(lettersSlice, letter{char, freq})
 }
 sort.Sort(lettersSlice)
+lettersSlice.Print()
+// l : 3 o : 2 d : 1 e : 1 h : 1 r : 1 w : 1
 ```
 
 More information about sorting in Go can be found here https://gobyexample.com/sorting-by-functions.
 
 I've found this data structure very useful when solving algorithm challenges in the past.
-I also like the nice clean example of types, structs and interface in Go. 
+I also like the nice clean example of types, structs and interfaces in Go. 
+
+All code used in the post is [here](https://gist.github.com/jcockbain/e76b65fc13e4f19faf9d2ae318c7f5a6).
+My solution to the original problem that inspired it can be found [here](https://github.com/jcockbain/advent-of-code-2016/blob/main/day05/main.go).
+
 
 Thanks for checking out this quick post! 👊
