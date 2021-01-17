@@ -21,6 +21,7 @@ const Footer = () => {
             linkedin
             twitter
             medium
+            stackoverflow
           }
         }
       }
