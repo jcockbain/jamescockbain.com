@@ -53,7 +53,7 @@ const Footer = () => {
           &bull;{" "}
           <a href={medium} target="_blank" rel="noopener noreferrer">
             medium
-          </a>
+          </a>{" "}
           &bull;{" "}
           <a href={stackoverflow} target="_blank" rel="noopener noreferrer">
             stack overflow
