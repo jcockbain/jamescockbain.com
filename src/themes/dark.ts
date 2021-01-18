@@ -7,6 +7,7 @@ export default {
   onPrimary: `#000000`,
   onSecondary: `#000000`,
   surface: "#1b191f",
+  button: "#616161",
   formBorder: "black",
   navbarColor: "#1b191f",
   onNavbar: `white`,

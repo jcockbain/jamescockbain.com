@@ -9,6 +9,7 @@ const FooterContainer = styled.div`
   width: 100%;
   margin-top: 2rem;
   color: ${props => props.theme.onBackground};
+  opacity: ${props => props.theme.headerOpacity};
 `
 
 const Footer = () => {

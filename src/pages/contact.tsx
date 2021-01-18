@@ -31,7 +31,7 @@ const FormContainer = styled.div`
     border-radius: 8px;
     padding: 12px 20px;
     color: ${props => props.theme.onPrimary};
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.button};
 
     &:enabled {
       cursor: pointer;

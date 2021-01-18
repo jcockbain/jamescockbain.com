@@ -18,14 +18,13 @@ interface Props extends PageRendererProps {
 const Date = styled.p`
   margin: 0.5rem 0;
 `
-
 const BlogContent = styled.div`
   margin-top: 1rem;
 
   blockquote {
     padding: 20px;
     margin: 20px 0;
-    border: 1px solid ${props => props.theme.formBorder};
+    border: 1.5px solid ${props => props.theme.formBorder};
     border-radius: 3px;
 
     border-left: 4px solid ${props => props.theme.calloutBorder};
@@ -47,6 +46,18 @@ const BlogContent = styled.div`
 
   blockquote + blockquote {
     margin-top: -5px;
+  }
+
+  .filename {
+    background: black;
+    padding: 0.5rem 1rem 0.75rem;
+    font-size: 0.8rem;
+    color: white;
+    opacity: ${props => props.theme.headerOpacity};
+    font-weight: bold;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -0.8rem;
   }
 `
 
