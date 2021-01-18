@@ -14,6 +14,7 @@ const StyledForm = styled.form`
     border: 2px solid ${props => props.theme.formBorder};
     background-color: ${props => props.theme.surface};
     color: ${props => props.theme.onBackground};
+    opacity: ${props => props.theme.textOpacity};
     border-radius: 4px;
     margin: 8px 0;
   }
@@ -25,12 +26,14 @@ const StyledForm = styled.form`
     border: 2px solid ${props => props.theme.formBorder};
     background-color: ${props => props.theme.surface};
     color: ${props => props.theme.onBackground};
+    opacity: ${props => props.theme.textOpacity};
     border-radius: 4px;
     margin: 8px 0;
   }
 
   label {
     color: ${props => props.theme.onBackground};
+    opacity: ${props => props.theme.headerOpacity};
   }
 `
 
