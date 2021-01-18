@@ -1,9 +1,9 @@
 ---
-title: Implementing a counter in Go, to find the most popular characters in a string
+title: Implementing a counter in Go to find the most popular characters in a string
 date: 2021-01-11
 template: post
 description: A Go data structure for recording the counts of each character in a string and sorting it by character frequency, and then alphabetically in the case of a tie.
-tags: ["golang", "algorithms","data structures"]
+tags: ["go", "algorithms","data structures"]
 ---
 
 This was inspired by advent-of-code, I've been using old challenges to practice Go. They also make me think of Christmas, which is nice in a miserable January lockdown 😆. 
@@ -35,7 +35,7 @@ print(ordering)
 # [('l', 3), ('o', 2), ('H', 1), ('d', 1), ('e', 1), ('r', 1), ('w', 1)]
 ```
 
-> We could also alternatively a `collections.defaultdict(int)` to remove the `if c not in counter` check in the second one. 
+> We could also alternatively use a `collections.defaultdict(int)` to remove the `if c not in counter` check in the second one. 
 I didn't, because it's the no external libraries option. 
 
 The lambda function I am passing to `sorted` handles the sorting first by popularity (decreasing hence the minus), and then by alphabet.
@@ -80,8 +80,8 @@ func (l letters) Swap(i, j int) {
 }
 ```
 
-The key to getting the sort right is the `Less` function. 
-Here if two letters are tied we compare the characters.
+The key is the `Less` function. 
+Here if two letters are equally present, we compare the characters.
 
 ```go
 func (l letters) Less(i, j int) bool {
@@ -95,7 +95,7 @@ func (l letters) Less(i, j int) bool {
 }
 ```
 
-Bringing this together is then simple. We have to loop over our initial counter to create the letters slice, but then `sort.Sort` function will handle the heavy lifting.
+Bringing this together is then simple. We have to loop over our initial counter to create the letters slice, but then the `sort.Sort` function will handle the heavy lifting.
 
 I've also added a function to print out the slice nicely too.
 
@@ -121,7 +121,7 @@ I've found this data structure very useful when solving algorithm challenges in 
 I also like the nice clean example of types, structs and interfaces in Go. 
 
 All code used in the post is [here](https://gist.github.com/jcockbain/e76b65fc13e4f19faf9d2ae318c7f5a6).
-My solution to the original problem that inspired it can be found [here](https://github.com/jcockbain/advent-of-code-2016/blob/main/day05/main.go).
+My solution to the original problem that inspired it can be found [here](https://github.com/jcockbain/advent-of-code-2016/blob/main/day04/main.go).
 
 
 Thanks for checking out this quick post! 👊

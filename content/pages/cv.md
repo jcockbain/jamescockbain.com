@@ -9,7 +9,7 @@ template: page
 
 *October 2020 -*
 
-On the Client Tools team. Supporting tools for deploying Vault, a cloud-native core banking platform, on internal and client-owned Kubernetes clusters.
+On the Client Tools team. Supporting tools for deploying Vault, a cloud-native core banking platform, on internal and client-owned clusters.
 Mainly working with Go, Python and Kubernetes.
 
 <!-- - Building and supporting the Node.js containers which are deployed into a user's cluster.

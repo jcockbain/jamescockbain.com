@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "James Cockbain",
     author: "James Cockbain",
-    description: `Personal site and blog for James Cockbain, IBM software developer.`,
+    description: `Personal site and blog for James Cockbain, software engineer at Thought Machine.`,
     siteUrl: `https://jamescockbain.com/`,
     social: {
       twitter: `james_cockbain`,
