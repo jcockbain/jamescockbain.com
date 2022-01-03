@@ -2,14 +2,14 @@
   "content": [
     {
       "name": "Advent Of Code",
-      "summary": "Solutions for Advent of Code challenges, written in Python and Go. I've completed years '19 and '20 and now going back in time to '15 - '18 to practice Go and algorithms. I find them the problems interesting and they make me think of Christmas 🎅, which is nice.",
+      "summary": "Solutions for Advent of Code challenges, written in Python and Go. I've completed years '19, '20 and '21. I also occasionally go back in time to '15 - '18 to practice Go and algorithms. I find the problems interesting and they make me think of Christmas 🎅, which is nice.",
       "technologies": [
         "Python",
         "Go",
         "Algorithms",
         "Christmas!"
       ],
-      "codeLink": "https://github.com/jcockbain/advent-of-code-2020",
+      "codeLink": "https://github.com/jcockbain/advent-of-code-2021",
       "deploymentLink": ""
     },
     {

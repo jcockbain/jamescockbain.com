@@ -9,7 +9,7 @@ template: page
 
 *October 2020 -*
 
-On the Client Tools team. Supporting tools for deploying Vault, a cloud-native core banking platform, on internal and client-owned clusters.
+On the Platform Tools team. Supporting tools for configuring and deploying Vault, a cloud-native core banking platform, on internal and client-owned clusters.
 Mainly working with Go, Python and Kubernetes.
 
 <!-- - Building and supporting the Node.js containers which are deployed into a user's cluster.
@@ -60,10 +60,10 @@ Developing mathematical models in Python to combine data from different sensors 
 
 Golang, Python, Javascript
 
-### Frameworks
+### Frameworks/Tools
 
-React, Express, HTML/CSS, Jekyll/Gatsby/Next.js, Bootstrap/Tailwindcss
+React, HTML/CSS, Bootstrap/Tailwindcss
 
 ### Devops
 
-Kubernetes, Docker
+Kubernetes, Docker, AWS/GCP
